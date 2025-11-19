@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Vitou Seng</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 16px;
+      line-height: 1.6;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      margin-bottom: 0.25rem;
+    }
+    nav a {
+      margin-right: 1rem;
+      text-decoration: none;
+    }
+    .tagline {
+      color: #555;
+      font-size: 0.95rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    footer {
+      margin-top: 3rem;
+      font-size: 0.85rem;
+      color: #777;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Your Name</h1>
+    <p class="tagline">Cybersecurity student & web dev learner</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About me</h2>
+    <p>
+      I'm a student interested in cybersecurity, networking, and web development.
+      This site is my little corner of the internet to share what I'm learning.
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li>Smart home dashboard (HTML/CSS/JS)</li>
+      <li>CTF writeups (OverTheWire, PicoCTF)</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      You can find me on <a href="https://github.com/oppakimchi" target="_blank">GitHub</a>.
+    </p>
+  </section>
+
+  <footer>
+    &copy; <span id="year"></span> Vitou Seng
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
