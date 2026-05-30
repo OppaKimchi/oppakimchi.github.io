@@ -1,0 +1,12 @@
+{
+  "name": "wedding-order-of-service",
+  "version": "1.0.0",
+  "description": "Digital Order of Service and Seating Plan for Vitou and Carmen",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.22.2"
+  }
+}
