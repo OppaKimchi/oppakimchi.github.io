@@ -3,7 +3,8 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(express.static(path.join(__dirname, 'public')));
+// Serve static files from the project root so `index.html` and `style.css` in the repo root are available
+app.use(express.static(__dirname));
 
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);

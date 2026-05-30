@@ -22,44 +22,67 @@
         <p>Type your first or last name below to find your table.</p>
         <input type="text" id="searchInput" placeholder="Enter your name..." onkeyup="searchGuest()">
         
-        <div id="results"></div>
-    </div>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Reception Seating | Vitou & Carmen</title>
+            <link rel="stylesheet" href="style.css">
+        </head>
+        <body>
+            <header>
+                <h1>Taste of Shunde Banquet</h1>
+                <p>Find Your Seat</p>
+            </header>
+    
+            <nav>
+                <a href="index.html">Order of Service</a>
+                <a href="seating.html">Reception Seating</a>
+            </nav>
 
-    <script>
-        const seatingData = [
-            { table: "Bridal Table", guests: ["Carmen Nguyen", "Vitou Seng", "Yameng Lai", "Phoebe Tao", "Alex Dam", "Tenzin"] },
-            { table: "Table 1", guests: ["Carol Chiu", "Jaffe Chiu", "Melody Robertson", "Edward Robertson", "Ian Robertson", "James Zhang", "Angie Zhang", "Ian Wu", "Winnie Wu", "Kinzey Rahardja"] },
-            { table: "Table 2", guests: ["Victor Lai", "Fiona Lam", "Vincent Chen", "Lina Chen", "Stephanie Wu", "Lily Xiao", "Marcus Li", "Sarah Chen", "Tom Pirie", "Naomi Huang"] },
-            { table: "Table 3", guests: ["Vickie Su", "Wilson Leung", "Carl Tong", "Celeste Leong", "Linh Dam", "Tracy Li", "Nancy Li", "Glorya Lam", "Alan Lam", "Kenny Zhou"] },
-            { table: "Table 4", guests: ["Chau Au", "Antanitta Rajah", "Nicholas Lee", "Keanu Tsang", "Wilbur Tsang", "Andrea Su", "Terence Li", "Andy Hardy", "Madeline Tjahjadi", "Kevin Lee"] }
-            // Add Tables 5 through 9 from your spreadsheet here
-        ];
+            <div class="container">
+                <h2>Guest Search</h2>
+                <p>Type your first or last name below to find your table.</p>
+                <input type="text" id="searchInput" placeholder="Enter your name..." onkeyup="searchGuest()">
+        
+                <div id="results"></div>
+            </div>
 
-        function searchGuest() {
-            const input = document.getElementById('searchInput').value.toLowerCase();
-            const resultsDiv = document.getElementById('results');
-            resultsDiv.innerHTML = '';
+            <script>
+                const seatingData = [
+                    { table: "Bridal Table", guests: ["Carmen Nguyen", "Vitou Seng", "Yameng Lai", "Phoebe Tao", "Alex Dam", "Tenzin"] },
+                    { table: "Table 1", guests: ["Carol Chiu", "Jaffe Chiu", "Melody Robertson", "Edward Robertson", "Ian Robertson", "James Zhang", "Angie Zhang", "Ian Wu", "Winnie Wu", "Kinzey Rahardja"] },
+                    { table: "Table 2", guests: ["Victor Lai", "Fiona Lam", "Vincent Chen", "Lina Chen", "Stephanie Wu", "Lily Xiao", "Marcus Li", "Sarah Chen", "Tom Pirie", "Naomi Huang"] },
+                    { table: "Table 3", guests: ["Vickie Su", "Wilson Leung", "Carl Tong", "Celeste Leong", "Linh Dam", "Tracy Li", "Nancy Li", "Glorya Lam", "Alan Lam", "Kenny Zhou"] },
+                    { table: "Table 4", guests: ["Chau Au", "Antanitta Rajah", "Nicholas Lee", "Keanu Tsang", "Wilbur Tsang", "Andrea Su", "Terence Li", "Andy Hardy", "Madeline Tjahjadi", "Kevin Lee"] }
+                ];
 
-            if (input.length < 2) return;
+                function searchGuest() {
+                    const input = document.getElementById('searchInput').value.toLowerCase();
+                    const resultsDiv = document.getElementById('results');
+                    resultsDiv.innerHTML = '';
 
-            seatingData.forEach(tableGroup => {
-                const matchedGuests = tableGroup.guests.filter(guest => guest.toLowerCase().includes(input));
+                    if (input.length < 2) return;
+
+                    seatingData.forEach(tableGroup => {
+                        const matchedGuests = tableGroup.guests.filter(guest => guest.toLowerCase().includes(input));
                 
-                if (matchedGuests.length > 0) {
-                    const tableHtml = `
-                        <div class="table-result">
-                            <h3>${tableGroup.table}</h3>
-                            <p><strong>Guests at this table:</strong> ${tableGroup.guests.join(', ')}</p>
-                        </div>
-                    `;
-                    resultsDiv.innerHTML += tableHtml;
-                }
-            });
+                        if (matchedGuests.length > 0) {
+                            const tableHtml = `
+                                <div class="table-result">
+                                    <h3>${tableGroup.table}</h3>
+                                    <p><strong>Guests at this table:</strong> ${tableGroup.guests.join(', ')}</p>
+                                </div>
+                            `;
+                            resultsDiv.innerHTML += tableHtml;
+                        }
+                    });
 
-            if (resultsDiv.innerHTML === '') {
-                resultsDiv.innerHTML = '<p>No guest found. Please try searching a different name.</p>';
-            }
-        }
-    </script>
-</body>
-</html>
+                    if (resultsDiv.innerHTML === '') {
+                        resultsDiv.innerHTML = '<p>No guest found. Please try searching a different name.</p>';
+                    }
+                }
+            </script>
+        </body>
+        </html>
