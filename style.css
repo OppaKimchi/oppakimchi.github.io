@@ -395,7 +395,7 @@ input[type="text"]:focus {
 }
 
 .photo-card-large img {
-    aspect-ratio: 3 / 4;
+    aspect-ratio: 4 / 5;
 }
 
 .photo-card figcaption {
@@ -493,13 +493,9 @@ strong {
         grid-template-columns: 1.35fr 1fr 1fr;
     }
 
-    .photo-card-large {
-        grid-row: span 2;
-    }
-
     .photo-card-large img {
-        aspect-ratio: auto;
-        min-height: 100%;
+        aspect-ratio: 4 / 5;
+        min-height: 0;
     }
 }
 
