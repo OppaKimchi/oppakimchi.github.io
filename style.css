@@ -234,6 +234,28 @@ body::before {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 250, 246, 0.92));
 }
 
+.menu-panel {
+    text-align: center;
+}
+
+.menu-image-wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #0b1027;
+    box-shadow: 0 18px 44px rgba(32, 20, 24, 0.16);
+    border: 1px solid rgba(122, 34, 48, 0.12);
+}
+
+.menu-image-wrap img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 82vh;
+    object-fit: contain;
+}
+
 .section-heading {
     margin-bottom: 1.2rem;
 }
