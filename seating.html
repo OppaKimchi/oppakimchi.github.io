@@ -4,85 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reception Seating | Vitou & Carmen</title>
+    <!-- Link to the external CSS file for styling -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Top header section displaying the event title -->
     <header>
         <h1>Taste of Shunde Banquet</h1>
         <p>Find Your Seat</p>
     </header>
     
+    <!-- Navigation menu to switch between pages -->
     <nav>
         <a href="index.html">Order of Service</a>
         <a href="seating.html">Reception Seating</a>
     </nav>
 
+    <!-- Main content container -->
     <div class="container">
         <h2>Guest Search</h2>
         <p>Type your first or last name below to find your table.</p>
+        
+        <!-- Search input field. 'onkeyup' triggers the searchGuest function every time a key is released -->
         <input type="text" id="searchInput" placeholder="Enter your name..." onkeyup="searchGuest()">
         
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Reception Seating | Vitou & Carmen</title>
-            <link rel="stylesheet" href="style.css">
-        </head>
-        <body>
-            <header>
-                <h1>Taste of Shunde Banquet</h1>
-                <p>Find Your Seat</p>
-            </header>
-    
-            <nav>
-                <a href="index.html">Order of Service</a>
-                <a href="seating.html">Reception Seating</a>
-            </nav>
+        <!-- This empty div is where the search results will be displayed -->
+        <div id="results"></div>
+    </div>
 
-            <div class="container">
-                <h2>Guest Search</h2>
-                <p>Type your first or last name below to find your table.</p>
-                <input type="text" id="searchInput" placeholder="Enter your name..." onkeyup="searchGuest()">
-        
-                <div id="results"></div>
-            </div>
+    <script>
+        // This array holds the seating data, maintaining the original column allocations 
+        // with overflow guests at Tables 1, 2, and 3, and the bridal party extracted.
+        const seatingData = [
+            { table: "Bridal Table", guests: ["Carmen Nguyen", "Vitou Seng", "Yameng Lai", "Phoebe Tao", "Alex Dam", "Tenzin Shakya"] },
+            { table: "Table 1", guests: ["Carol Chiu", "Jaffe Chiu", "Melody Robertson", "Edward Robertson", "Ian Robertson", "Ian Wu", "Winnie Wu", "Kinzey Rahardja", "Stella Li"] },
+            { table: "Table 2", guests: ["Victor Lai", "Fiona Lam", "Vincent Chen", "Lina Chen", "Stephanie Wu", "James Zhang", "Angie Zhang", "Sarah Chen", "Tom Pirie", "Naomi Huang", "Jason He"] },
+            { table: "Table 3", guests: ["Vickie Su", "Wilson Leung", "Carl Tong", "Celeste Leong", "Linh Dam", "Lily Xiao", "Marcus Li", "Glorya Lam", "Alan Lam", "Kenny Zhou", "Kathleem Dumlao"] },
+            { table: "Table 4", guests: ["Chau Au", "Antanitta Rajah", "Nicholas Lee", "Keanu Tsang", "Wilbur Tsang", "Tracy Li", "Nancy Li", "Andy Hardy", "Madeline Tjahjadi", "Kevin Lee"] },
+            { table: "Table 5", guests: ["Sophia Aspera", "Isaac Lau", "Tracey Nguyen", "James Wealth", "Ali Fardos", "Andrea Su", "Terence Li", "Trent Bell", "Sameen Khan", "Michael O'Reilly"] },
+            { table: "Table 6", guests: ["Alice Chau", "Grandma", "Anson Nguyen", "Calista Chiu", "Aaron Nguyen", "Kate Aizparu", "Hayley Espanol", "Kan Kee Fung", "Pholy Chin", "Thidapith Tith"] },
+            { table: "Table 7", guests: ["Vichet Seng", "Malen Eang", "Oscar Chet", "Veronika Chet", "Angelina Chet", "Kenneth Fung", "Chor Ling Ho", "Grace Chen", "Ben Pantlin", "Cate Hong"] },
+            { table: "Table 8", guests: ["Vouch Ngim Srun", "Neang Seng", "Savorn In", "Vouchluy Srun", "Jim McDonald", "Botum Bun", "Sofie McDonald", "Erick Seng"] },
+            { table: "Table 9", guests: ["Peter Chen", "Howard Law", "Thomas Chin", "Carol Chin", "Jenny Voller", "Geoff Voller", "Estella Green"] }
+        ];
 
-            <script>
-                const seatingData = [
-                    { table: "Bridal Table", guests: ["Carmen Nguyen", "Vitou Seng", "Yameng Lai", "Phoebe Tao", "Alex Dam", "Tenzin"] },
-                    { table: "Table 1", guests: ["Carol Chiu", "Jaffe Chiu", "Melody Robertson", "Edward Robertson", "Ian Robertson", "James Zhang", "Angie Zhang", "Ian Wu", "Winnie Wu", "Kinzey Rahardja"] },
-                    { table: "Table 2", guests: ["Victor Lai", "Fiona Lam", "Vincent Chen", "Lina Chen", "Stephanie Wu", "Lily Xiao", "Marcus Li", "Sarah Chen", "Tom Pirie", "Naomi Huang"] },
-                    { table: "Table 3", guests: ["Vickie Su", "Wilson Leung", "Carl Tong", "Celeste Leong", "Linh Dam", "Tracy Li", "Nancy Li", "Glorya Lam", "Alan Lam", "Kenny Zhou"] },
-                    { table: "Table 4", guests: ["Chau Au", "Antanitta Rajah", "Nicholas Lee", "Keanu Tsang", "Wilbur Tsang", "Andrea Su", "Terence Li", "Andy Hardy", "Madeline Tjahjadi", "Kevin Lee"] }
-                ];
+        // This function runs every time the user types in the search box
+        function searchGuest() {
+            // Get the text typed by the user, convert it to lowercase, and remove any accidental spaces at the end
+            const input = document.getElementById('searchInput').value.toLowerCase().trim();
+            
+            // Find the HTML element where we will show the results
+            const resultsDiv = document.getElementById('results');
+            
+            // If the user has typed less than 2 letters, clear the results and stop running
+            if (input.length < 2) {
+                resultsDiv.innerHTML = '';
+                return;
+            }
 
-                function searchGuest() {
-                    const input = document.getElementById('searchInput').value.toLowerCase();
-                    const resultsDiv = document.getElementById('results');
-                    resultsDiv.innerHTML = '';
+            // Create a temporary variable to hold the HTML code we are about to generate
+            let htmlString = '';
 
-                    if (input.length < 2) return;
-
-                    seatingData.forEach(tableGroup => {
-                        const matchedGuests = tableGroup.guests.filter(guest => guest.toLowerCase().includes(input));
+            // Look through each table in the seatingData list
+            seatingData.forEach(tableGroup => {
+                // Filter the guests at the current table to see if any match the typed input
+                const matchedGuests = tableGroup.guests.filter(guest => guest.toLowerCase().includes(input));
                 
-                        if (matchedGuests.length > 0) {
-                            const tableHtml = `
-                                <div class="table-result">
-                                    <h3>${tableGroup.table}</h3>
-                                    <p><strong>Guests at this table:</strong> ${tableGroup.guests.join(', ')}</p>
-                                </div>
-                            `;
-                            resultsDiv.innerHTML += tableHtml;
-                        }
-                    });
-
-                    if (resultsDiv.innerHTML === '') {
-                        resultsDiv.innerHTML = '<p>No guest found. Please try searching a different name.</p>';
-                    }
+                // If we found at least one matching guest at this table, create the HTML to display the table info
+                if (matchedGuests.length > 0) {
+                    htmlString += `
+                        <div class="table-result">
+                            <h3>${tableGroup.table}</h3>
+                            <p><strong>Guests at this table:</strong> ${tableGroup.guests.join(', ')}</p>
+                        </div>
+                    `;
                 }
-            </script>
-        </body>
-        </html>
+            });
+
+            // After checking all tables, decide what to show the user
+            if (htmlString === '') {
+                // If no matches were found, display a helpful message
+                resultsDiv.innerHTML = '<p>No guest found. Please try searching a different name.</p>';
+            } else {
+                // If matches were found, insert the generated HTML into the page
+                resultsDiv.innerHTML = htmlString;
+            }
+        }
+    </script>
+</body>
+</html>
