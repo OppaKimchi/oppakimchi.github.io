@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vitou & Carmen's Wedding</title>
     <meta name="theme-color" content="#7a2230">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,17 +17,35 @@
             <h1>Vitou & Carmen</h1>
             <p class="date">Saturday, 27 June 2026</p>
             <p class="subtitle">A simple guide to the ceremony, the afternoon break, and the evening banquet.</p>
+            <div class="countdown" id="countdown">
+                <div class="countdown-box">
+                    <span class="countdown-num" id="cd-days">--</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-box">
+                    <span class="countdown-num" id="cd-hours">--</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-box">
+                    <span class="countdown-num" id="cd-mins">--</span>
+                    <span class="countdown-label">Mins</span>
+                </div>
+                <div class="countdown-box">
+                    <span class="countdown-num" id="cd-secs">--</span>
+                    <span class="countdown-label">Secs</span>
+                </div>
+            </div>
         </div>
     </header>
     
     <nav class="top-nav">
-        <a href="index.html">Order of Service</a>
-        <a href="seating.html">Reception Seating</a>
-        <a href="banquet-menu.html">Banquet Menu</a>
+        <a href="index.html" class="active"><i class="nav-icon">📋</i>Order of Service</a>
+        <a href="seating.html"><i class="nav-icon">🪑</i>Reception Seating</a>
+        <a href="banquet-menu.html"><i class="nav-icon">🍽️</i>Banquet Menu</a>
     </nav>
 
     <main class="container flow-layout">
-        <section class="panel">
+        <section class="panel fade-in" style="--delay: 0s">
             <div class="section-heading">
                 <h2>The Order of Events</h2>
                 <p>Everything you need for the day in one place.</p>
@@ -53,7 +74,7 @@
             </div>
         </section>
 
-        <section class="panel soft-panel">
+        <section class="panel soft-panel fade-in" style="--delay: 0.1s">
             <div class="section-heading">
                 <h2>The Wedding Party</h2>
                 <p>The people helping us celebrate and keep the day running smoothly.</p>
@@ -67,7 +88,7 @@
             </div>
         </section>
 
-        <section class="panel venue-panel">
+        <section class="panel venue-panel fade-in" style="--delay: 0.15s">
             <div class="section-heading">
                 <h2>Venues, Maps & Parking</h2>
                 <p>Tap a map link for directions, then plan a little extra time for parking and walking in.</p>
@@ -88,7 +109,7 @@
                 <article class="venue-card">
                     <p class="venue-label">Reception</p>
                     <h3>Taste of Shunde</h3>
-                    <p>Forest Road, Hurstville. We’ll gather here for the banquet at 5:30 PM.</p>
+                    <p>Forest Road, Hurstville. We'll gather here for the banquet at 5:30 PM.</p>
                     <ul class="info-list">
                         <li>Map: <a href="https://www.google.com/maps/search/?api=1&query=Taste+of+Shunde+Forest+Road+Hurstville" target="_blank" rel="noopener noreferrer">Open in Google Maps</a></li>
                         <li>Parking: Check for nearby street parking or public parking before the dinner rush.</li>
@@ -98,27 +119,103 @@
             </div>
         </section>
 
-        <section class="panel gallery-panel">
+        <section class="panel gallery-panel fade-in" style="--delay: 0.2s">
             <div class="section-heading">
                 <h2>Photo Highlights</h2>
                 <p>Three moments from the day we wanted to share with everyone.</p>
             </div>
 
             <div class="photo-grid">
-                <figure class="photo-card photo-card-large">
+                <figure class="photo-card photo-card-large" onclick="openLightbox(this)">
                     <img src="images/CarmenVitou39.JPG" alt="Vitou and Carmen walking hand in hand at sunset by the water">
                     <figcaption>Golden hour by the water.</figcaption>
                 </figure>
-                <figure class="photo-card">
+                <figure class="photo-card" onclick="openLightbox(this)">
                     <img src="images/CarmenVitou46.JPG" alt="Vitou and Carmen walking in front of the Sydney Harbour Bridge">
                     <figcaption>Walking together through the city.</figcaption>
                 </figure>
-                <figure class="photo-card">
+                <figure class="photo-card" onclick="openLightbox(this)">
                     <img src="images/CarmenVitou54.JPG" alt="Vitou and Carmen holding hands under a tree at sunset">
                     <figcaption>A quiet moment in the park.</figcaption>
                 </figure>
             </div>
         </section>
     </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
+        <button class="lightbox-close" aria-label="Close lightbox" onclick="closeLightbox()">✕</button>
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <footer>
+        Vitou & Carmen · 27 June 2026 · Made with <i class="footer-heart">♥</i>
+    </footer>
+
+    <script>
+        // ── Countdown Timer ──
+        (function() {
+            const weddingDate = new Date('2026-06-27T10:30:00+10:00').getTime();
+            const daysEl = document.getElementById('cd-days');
+            const hoursEl = document.getElementById('cd-hours');
+            const minsEl = document.getElementById('cd-mins');
+            const secsEl = document.getElementById('cd-secs');
+
+            function update() {
+                const now = Date.now();
+                const diff = weddingDate - now;
+                if (diff <= 0) {
+                    daysEl.textContent = '0';
+                    hoursEl.textContent = '0';
+                    minsEl.textContent = '0';
+                    secsEl.textContent = '0';
+                    return;
+                }
+                const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+                const m = Math.floor((diff / (1000 * 60)) % 60);
+                const s = Math.floor((diff / 1000) % 60);
+                daysEl.textContent = d;
+                hoursEl.textContent = h;
+                minsEl.textContent = m;
+                secsEl.textContent = s;
+            }
+            update();
+            setInterval(update, 1000);
+        })();
+
+        // ── Scroll fade-in (IntersectionObserver) ──
+        (function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.08 });
+
+            document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        })();
+
+        // ── Lightbox ──
+        function openLightbox(card) {
+            const src = card.querySelector('img').src;
+            const alt = card.querySelector('img').alt;
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox-img').alt = alt;
+            document.getElementById('lightbox').classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeLightbox();
+        });
+    </script>
 </body>
 </html>

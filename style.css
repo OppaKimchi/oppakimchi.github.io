@@ -17,7 +17,7 @@
 body {
     margin: 0;
     min-height: 100vh;
-    font-family: "Georgia", "Times New Roman", serif;
+    font-family: "Playfair Display", Georgia, serif;
     color: var(--text);
     text-align: center;
     background:
@@ -44,10 +44,13 @@ body::before {
 
 .hero,
 .top-nav,
-.container {
+.container,
+footer {
     position: relative;
     z-index: 1;
 }
+
+/* ─── Hero ─── */
 
 .hero {
     max-width: 980px;
@@ -67,7 +70,7 @@ body::before {
     align-items: flex-end;
     justify-content: flex-start;
     background-image:
-        linear-gradient(180deg, rgba(33, 18, 16, 0.08) 0%, rgba(33, 18, 16, 0.42) 100%),
+        linear-gradient(180deg, rgba(33, 18, 16, 0.08) 0%, rgba(33, 18, 16, 0.52) 100%),
         url("images/CarmenVitou39.JPG");
     background-size: cover;
     background-position: center center;
@@ -75,6 +78,26 @@ body::before {
 
 .hero-maroon {
     background: linear-gradient(145deg, rgba(122, 34, 48, 0.98), rgba(86, 23, 32, 0.96));
+}
+
+.hero-menu {
+    background:
+        radial-gradient(ellipse at 20% 0%, rgba(196, 130, 100, 0.35) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 100%, rgba(160, 90, 70, 0.25) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.06) 0%, transparent 70%),
+        linear-gradient(145deg, #7a2230 0%, #561720 40%, #3d1018 70%, #4a1a24 100%);
+}
+
+.hero-menu::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(circle at 25% 30%, rgba(255, 215, 180, 0.08) 0 60px, transparent 61px),
+        radial-gradient(circle at 75% 70%, rgba(255, 215, 180, 0.06) 0 40px, transparent 41px),
+        radial-gradient(circle at 50% 10%, rgba(255, 255, 255, 0.04) 0 30px, transparent 31px);
+    pointer-events: none;
+    border-radius: 28px;
 }
 
 .hero-copy {
@@ -85,6 +108,28 @@ body::before {
     padding: 1.2rem 1rem 1rem 0.25rem;
 }
 
+/* Hero text entrance animation */
+@keyframes heroSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(28px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-copy > * {
+    animation: heroSlideUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-copy > :nth-child(1) { animation-delay: 0.1s; }
+.hero-copy > :nth-child(2) { animation-delay: 0.25s; }
+.hero-copy > :nth-child(3) { animation-delay: 0.4s; }
+.hero-copy > :nth-child(4) { animation-delay: 0.55s; }
+.hero-copy > :nth-child(5) { animation-delay: 0.7s; }
+
 .hero::after {
     content: "";
     position: absolute;
@@ -93,6 +138,8 @@ body::before {
     border-radius: 20px;
     pointer-events: none;
 }
+
+/* ─── Typography ─── */
 
 .eyebrow,
 .date,
@@ -104,7 +151,7 @@ body::before {
 .party-grid p,
 .top-nav a,
 .search-label {
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
 }
 
 .eyebrow {
@@ -137,6 +184,48 @@ body::before {
     color: rgba(255, 250, 247, 0.82);
 }
 
+/* ─── Countdown ─── */
+
+.countdown {
+    display: flex;
+    gap: 0.6rem;
+    margin-top: 1.4rem;
+    flex-wrap: wrap;
+}
+
+.countdown-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 4.2rem;
+    padding: 0.65rem 0.8rem 0.55rem;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.countdown-num {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #fff;
+}
+
+.countdown-label {
+    font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: rgba(255, 250, 247, 0.7);
+    margin-top: 0.2rem;
+}
+
+/* ─── Nav ─── */
+
 .top-nav {
     display: inline-flex;
     flex-wrap: wrap;
@@ -161,7 +250,7 @@ body::before {
     text-decoration: none;
     font-size: 0.95rem;
     font-weight: 700;
-    transition: transform 150ms ease, background-color 150ms ease, color 150ms ease;
+    transition: transform 150ms ease, background-color 150ms ease, color 150ms ease, box-shadow 150ms ease;
 }
 
 .top-nav a:hover,
@@ -169,8 +258,23 @@ body::before {
     color: #fff;
     background: var(--brand);
     transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(122, 34, 48, 0.25);
     outline: none;
 }
+
+.top-nav a.active {
+    color: #fff;
+    background: var(--brand);
+    box-shadow: 0 4px 12px rgba(122, 34, 48, 0.2);
+}
+
+.nav-icon {
+    margin-right: 0.35rem;
+    font-style: normal;
+    font-size: 1rem;
+}
+
+/* ─── Container / Layout ─── */
 
 .container {
     width: min(100% - 2rem, 980px);
@@ -182,6 +286,8 @@ body::before {
 .flow-layout {
     grid-template-columns: 1fr;
 }
+
+/* ─── Panels ─── */
 
 .panel {
     padding: clamp(1.25rem, 3vw, 2rem);
@@ -257,6 +363,8 @@ body::before {
     object-fit: contain;
 }
 
+/* ─── Section Headings ─── */
+
 .section-heading {
     margin-bottom: 1.2rem;
 }
@@ -273,9 +381,12 @@ body::before {
     line-height: 1.6;
 }
 
+/* ─── Schedule ─── */
+
 .schedule-item {
     padding: 1rem 0;
     border-top: 1px solid rgba(122, 34, 48, 0.12);
+    transition: background-color 200ms ease;
 }
 
 .schedule-item:first-of-type {
@@ -283,9 +394,18 @@ body::before {
     padding-top: 0;
 }
 
+.schedule-item:hover {
+    background: rgba(122, 34, 48, 0.03);
+    border-radius: 12px;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+}
+
 .schedule-item h3 {
     margin: 0 0 0.6rem;
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
     font-size: 1.08rem;
     line-height: 1.4;
 }
@@ -310,6 +430,8 @@ body::before {
     color: var(--muted);
 }
 
+/* ─── Wedding Party ─── */
+
 .party-grid {
     display: grid;
     gap: 0.75rem;
@@ -322,7 +444,15 @@ body::before {
     border: 1px solid rgba(122, 34, 48, 0.08);
     border-radius: 16px;
     color: var(--text);
+    transition: transform 200ms ease, box-shadow 200ms ease;
 }
+
+.party-grid p:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(68, 35, 40, 0.1);
+}
+
+/* ─── Search ─── */
 
 .search-label {
     display: block;
@@ -340,7 +470,7 @@ input[type="text"] {
     border-radius: 14px;
     background: rgba(255, 255, 255, 0.95);
     color: var(--text);
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
     font-size: 1rem;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85);
     transition: border-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
@@ -363,6 +493,19 @@ input[type="text"]:focus {
     gap: 0.75rem;
 }
 
+/* ─── Search results with animation ─── */
+
+@keyframes resultSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .table-result {
     padding: 1rem 1.1rem;
     background: var(--surface-strong);
@@ -370,11 +513,15 @@ input[type="text"]:focus {
     border-radius: 16px;
     box-shadow: 0 12px 30px rgba(68, 35, 40, 0.06);
     text-align: left;
+    animation: resultSlideIn 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
+
+.table-result:nth-child(2) { animation-delay: 0.08s; }
+.table-result:nth-child(3) { animation-delay: 0.16s; }
 
 .table-result h3 {
     margin: 0 0 0.5rem;
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
     font-size: 1.05rem;
     color: var(--brand-dark);
 }
@@ -385,6 +532,14 @@ input[type="text"]:focus {
     line-height: 1.6;
 }
 
+mark {
+    background: rgba(122, 34, 48, 0.14);
+    color: var(--brand-dark);
+    font-weight: 700;
+    border-radius: 3px;
+    padding: 0.05em 0.2em;
+}
+
 .empty-state {
     margin: 0;
     padding: 1rem 1.1rem;
@@ -393,7 +548,10 @@ input[type="text"]:focus {
     border: 1px dashed rgba(122, 34, 48, 0.18);
     color: var(--muted);
     text-align: center;
+    animation: resultSlideIn 0.3s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
+
+/* ─── Photo Grid & Lightbox ─── */
 
 .photo-grid {
     display: grid;
@@ -407,6 +565,13 @@ input[type="text"]:focus {
     background: #fff;
     border: 1px solid rgba(122, 34, 48, 0.12);
     box-shadow: 0 16px 36px rgba(68, 35, 40, 0.08);
+    cursor: pointer;
+    transition: transform 300ms ease, box-shadow 300ms ease;
+}
+
+.photo-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 22px 48px rgba(68, 35, 40, 0.14);
 }
 
 .photo-card img {
@@ -415,6 +580,11 @@ input[type="text"]:focus {
     height: 100%;
     aspect-ratio: 4 / 5;
     object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.photo-card:hover img {
+    transform: scale(1.06);
 }
 
 .photo-card-large img {
@@ -423,11 +593,70 @@ input[type="text"]:focus {
 
 .photo-card figcaption {
     padding: 0.8rem 0.95rem 0.95rem;
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
     font-size: 0.92rem;
     color: var(--muted);
     text-align: left;
 }
+
+/* Lightbox */
+.lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(20, 10, 12, 0.88);
+    backdrop-filter: blur(12px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    cursor: zoom-out;
+}
+
+.lightbox-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox-overlay img {
+    max-width: 90vw;
+    max-height: 88vh;
+    border-radius: 16px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+    transform: scale(0.92);
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.lightbox-overlay.open img {
+    transform: scale(1);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.5rem;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 200ms ease;
+    backdrop-filter: blur(8px);
+}
+
+.lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.28);
+}
+
+/* ─── Venue Grid ─── */
 
 .venue-grid {
     display: grid;
@@ -440,14 +669,17 @@ input[type="text"]:focus {
     background: rgba(255, 255, 255, 0.94);
     border: 1px solid rgba(122, 34, 48, 0.12);
     box-shadow: 0 12px 30px rgba(68, 35, 40, 0.06);
+    transition: transform 250ms ease, box-shadow 250ms ease;
+}
+
+.venue-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 40px rgba(68, 35, 40, 0.12);
 }
 
 .venue-card h3 {
     margin: 0;
-    font-family: "Helvetica Neue", Arial, sans-serif;
-}
-
-.venue-card h3 {
+    font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
     font-size: 1.05rem;
     color: var(--brand-dark);
 }
@@ -464,7 +696,7 @@ input[type="text"]:focus {
 .venue-card p,
 .info-list {
     margin: 0.5rem 0 0;
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
     line-height: 1.65;
     color: var(--muted);
 }
@@ -482,6 +714,7 @@ input[type="text"]:focus {
     font-weight: 700;
     text-decoration-thickness: 2px;
     text-underline-offset: 0.15em;
+    transition: color 150ms ease;
 }
 
 .info-list a:hover,
@@ -492,6 +725,43 @@ input[type="text"]:focus {
 strong {
     color: var(--text);
 }
+
+/* ─── Fade-in scroll animation ─── */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: var(--delay, 0s);
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ─── Footer ─── */
+
+footer {
+    max-width: 980px;
+    margin: 0 auto 2rem;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.88rem;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+    letter-spacing: 0.02em;
+    line-height: 1.6;
+}
+
+footer .footer-heart {
+    color: var(--brand);
+    font-style: normal;
+}
+
+/* ─── Desktop ─── */
 
 @media (min-width: 840px) {
     .container {
@@ -522,6 +792,8 @@ strong {
     }
 }
 
+/* ─── Mobile ─── */
+
 @media (max-width: 640px) {
     .hero {
         margin-top: 0.75rem;
@@ -544,8 +816,11 @@ strong {
     }
 
     .hero-photo {
-        min-height: 26rem;
+        min-height: 28rem;
         background-position: center top;
+        background-image:
+            linear-gradient(180deg, rgba(33, 18, 16, 0.12) 0%, rgba(33, 18, 16, 0.62) 100%),
+            url("images/CarmenVitou39.JPG");
     }
 
     .hero-copy {
@@ -559,5 +834,23 @@ strong {
 
     .photo-card img {
         aspect-ratio: 16 / 12;
+    }
+
+    .countdown {
+        gap: 0.45rem;
+    }
+
+    .countdown-box {
+        min-width: 3.6rem;
+        padding: 0.5rem 0.6rem 0.4rem;
+    }
+
+    .countdown-num {
+        font-size: 1.3rem;
+    }
+
+    footer {
+        margin-bottom: 1.5rem;
+        padding: 1.2rem 0.75rem;
     }
 }

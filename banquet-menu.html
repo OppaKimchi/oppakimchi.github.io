@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Banquet Menu | Vitou & Carmen</title>
     <meta name="theme-color" content="#7a2230">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,13 +19,13 @@
     </header>
 
     <nav class="top-nav">
-        <a href="index.html">Order of Service</a>
-        <a href="seating.html">Reception Seating</a>
-        <a href="banquet-menu.html">Banquet Menu</a>
+        <a href="index.html"><i class="nav-icon">📋</i>Order of Service</a>
+        <a href="seating.html"><i class="nav-icon">🪑</i>Reception Seating</a>
+        <a href="banquet-menu.html" class="active"><i class="nav-icon">🍽️</i>Banquet Menu</a>
     </nav>
 
     <main class="container flow-layout">
-        <section class="panel menu-panel">
+        <section class="panel menu-panel fade-in" style="--delay: 0s">
             <div class="section-heading">
                 <h2>Banquet Menu</h2>
             </div>
@@ -32,5 +35,25 @@
             </div>
         </section>
     </main>
+
+    <footer>
+        Vitou & Carmen · 27 June 2026 · Made with <i class="footer-heart">♥</i>
+    </footer>
+
+    <script>
+        // ── Scroll fade-in ──
+        (function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.08 });
+
+            document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        })();
+    </script>
 </body>
 </html>
