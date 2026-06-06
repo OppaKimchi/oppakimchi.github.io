@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible Readings | Vitou & Carmen</title>
+    <meta name="description"
+        content="Scripture passages chosen for Vitou and Carmen's wedding ceremony on 27 June 2026.">
+    <meta name="theme-color" content="#7a2230">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="hero hero-maroon">
+        <p class="eyebrow">Scripture</p>
+        <h1>Bible Readings</h1>
+        <p class="date">God's Word for Our Day</p>
+        <p class="subtitle">The passages of Scripture chosen to be read during our ceremony.</p>
+    </header>
+
+    <nav class="top-nav">
+        <a href="index.html"><i class="nav-icon">📋</i>Order of Service</a>
+        <a href="songs.html"><i class="nav-icon">🎵</i>Songs</a>
+        <a href="bible-readings.html" class="active"><i class="nav-icon">📖</i>Bible Readings</a>
+        <a href="seating.html"><i class="nav-icon">🪑</i>Reception Seating</a>
+        <a href="banquet-menu.html"><i class="nav-icon">🍽️</i>Banquet Menu</a>
+    </nav>
+
+    <main class="container flow-layout">
+        <section class="panel fade-in" style="--delay: 0s">
+            <div class="section-heading">
+                <h2>Scripture Readings</h2>
+                <p>The passages that will be shared during the ceremony.</p>
+            </div>
+
+            <div class="reading-list">
+                <article class="reading-card">
+                    <p class="reading-label">First Reading</p>
+                    <h3>To be announced</h3>
+                    <blockquote class="reading-text">
+                        The scripture passage will be shared here closer to the wedding day.
+                    </blockquote>
+                </article>
+
+                <article class="reading-card">
+                    <p class="reading-label">Second Reading</p>
+                    <h3>To be announced</h3>
+                    <blockquote class="reading-text">
+                        The scripture passage will be shared here closer to the wedding day.
+                    </blockquote>
+                </article>
+
+                <article class="reading-card">
+                    <p class="reading-label">Third Reading</p>
+                    <h3>To be announced</h3>
+                    <blockquote class="reading-text">
+                        The scripture passage will be shared here closer to the wedding day.
+                    </blockquote>
+                </article>
+            </div>
+        </section>
+
+        <section class="panel soft-panel fade-in" style="--delay: 0.1s">
+            <div class="section-heading">
+                <h2>Why These Passages</h2>
+                <p>These readings were chosen because they speak to the promises we are making and the love that brought
+                    us together. We hope they encourage you as much as they encourage us.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        Vitou & Carmen · 27 June 2026 · Made with <i class="footer-heart">♥</i>
+    </footer>
+
+    <script>
+        // ── Scroll fade-in ──
+        (function () {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.08 });
+
+            document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        })();
+    </script>
+</body>
+
+</html>

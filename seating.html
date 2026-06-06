@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,12 @@
     <meta name="theme-color" content="#7a2230">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header class="hero hero-maroon">
         <p class="eyebrow">Reception Seating</p>
@@ -17,9 +21,11 @@
         <p class="date">Find Your Seat</p>
         <p class="subtitle">Search by first or last name to see your table.</p>
     </header>
-    
+
     <nav class="top-nav">
         <a href="index.html"><i class="nav-icon">📋</i>Order of Service</a>
+        <a href="songs.html"><i class="nav-icon">🎵</i>Songs</a>
+        <a href="bible-readings.html"><i class="nav-icon">📖</i>Bible Readings</a>
         <a href="seating.html" class="active"><i class="nav-icon">🪑</i>Reception Seating</a>
         <a href="banquet-menu.html"><i class="nav-icon">🍽️</i>Banquet Menu</a>
     </nav>
@@ -45,12 +51,12 @@
 
     <script>
         const seatingData = [
-            { table: "Table 1", guests: ["Carol Chiu", "Jaffe Chiu", "Melody Robertson", "Edward Robertson", "Ian Robertson", "James Zhang", "Angie Zhang","Ian Wu", "Winnie Wu", "Howard Law"] },
+            { table: "Table 1", guests: ["Carol Chiu", "Jaffe Chiu", "Melody Robertson", "Edward Robertson", "Ian Robertson", "James Zhang", "Angie Zhang", "Ian Wu", "Winnie Wu", "Howard Law"] },
             { table: "Table 2", guests: ["Victor Lai", "Fiona Lam", "Vincent Chen", "Lina Chen", "Stephanie Wu", "Lily Xiao", "Marcus Li", "Sarah Chen", "Tom Pirie", "Naomi Huang"] },
             { table: "Table 3", guests: ["Vickie Su", "Wilson Leung", "Carl Tong", "Celeste Leong", "Tracy Li", "Nancy Li", "Glorya Lam", "Alan Lam", "Kenny Zhou"] },
             { table: "Table 4", guests: ["Chau Au", "Antanitta Rajah", "Nicholas Lee", "Keanu Tsang", "Wilbur Tsang", "Andrea Su", "Terence Li", "Andy Hardy", "Madeline Tjahjadi", "Kevin Lee"] },
             { table: "Table 5", guests: ["Sophia Aspera", "Isaac Lau", "Tracey Nguyen", "James Wealth", "Kate Aizparu", "Hayley Espanol", "Trent Bell", "Sameen Khan", "Michael O'Reilly", "Kathleem Dumlao"] },
-            { table: "Table 6", guests: ["Alice Chau", "Grandma", "Anson Nguyen", "Calista Chiu", "Aaron Nguyen","Kenneth Fung", "Chor Ling Ho", "Kan Kee Fung", "Jenny Voller", "Geoff Voller"] },
+            { table: "Table 6", guests: ["Alice Chau", "Grandma", "Anson Nguyen", "Calista Chiu", "Aaron Nguyen", "Kenneth Fung", "Chor Ling Ho", "Kan Kee Fung", "Jenny Voller", "Geoff Voller"] },
             { table: "Table 7", guests: ["Vichet Seng", "Malen Eang", "Oscar Chet", "Veronika Chet", "Angelina Chet", "Botum Bun", "Erick Seng", "Pholy Chin", "Thidapith Tith", "Jim McDonald", "Sofie McDonald"] },
             { table: "Table 8", guests: ["Vouch Ngim Srun", "Neang Seng", "Savorn In", "Vouchluy Srun", "Carmen Nguyen", "Vitou Seng", "Yameng Lai", "Phoebe Tao", "Alex Dam", "Linh Dam", "Tenzin Shakya"] },
             { table: "Table 9", guests: ["Peter Chen", "Thomas Chin", "Carol Chin", "Estella Green", "Grace Chen", "Ben Pantlin", "Cate Hong", "Jason He", "Kinzey Rahardja", "Stella Li", "Ali Fardos"] }
@@ -115,7 +121,7 @@
         });
 
         // ── Scroll fade-in ──
-        (function() {
+        (function () {
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -129,4 +135,5 @@
         })();
     </script>
 </body>
+
 </html>

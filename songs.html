@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Songs | Vitou & Carmen</title>
+    <meta name="description" content="Worship and ceremony songs for Vitou and Carmen's wedding on 27 June 2026.">
+    <meta name="theme-color" content="#7a2230">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="hero hero-maroon">
+        <p class="eyebrow">Ceremony Music</p>
+        <h1>Songs</h1>
+        <p class="date">Worship & Celebration</p>
+        <p class="subtitle">The songs chosen for our ceremony — hymns of praise, love, and thanksgiving.</p>
+    </header>
+
+    <nav class="top-nav">
+        <a href="index.html"><i class="nav-icon">📋</i>Order of Service</a>
+        <a href="songs.html" class="active"><i class="nav-icon">🎵</i>Songs</a>
+        <a href="bible-readings.html"><i class="nav-icon">📖</i>Bible Readings</a>
+        <a href="seating.html"><i class="nav-icon">🪑</i>Reception Seating</a>
+        <a href="banquet-menu.html"><i class="nav-icon">🍽️</i>Banquet Menu</a>
+    </nav>
+
+    <main class="container flow-layout">
+        <section class="panel fade-in" style="--delay: 0s">
+            <div class="section-heading">
+                <h2>Ceremony Songs</h2>
+                <p>The music that will accompany our wedding ceremony.</p>
+            </div>
+
+            <div class="song-list">
+                <div class="song-item">
+                    <div class="song-number">1</div>
+                    <div class="song-details">
+                        <h3>Processional Song</h3>
+                        <p class="song-meta">To be announced</p>
+                    </div>
+                </div>
+
+                <div class="song-item">
+                    <div class="song-number">2</div>
+                    <div class="song-details">
+                        <h3>Congregational Song</h3>
+                        <p class="song-meta">To be announced</p>
+                    </div>
+                </div>
+
+                <div class="song-item">
+                    <div class="song-number">3</div>
+                    <div class="song-details">
+                        <h3>Worship Song</h3>
+                        <p class="song-meta">To be announced</p>
+                    </div>
+                </div>
+
+                <div class="song-item">
+                    <div class="song-number">4</div>
+                    <div class="song-details">
+                        <h3>Recessional Song</h3>
+                        <p class="song-meta">To be announced</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel soft-panel fade-in" style="--delay: 0.1s">
+            <div class="section-heading">
+                <h2>A Note on the Music</h2>
+                <p>Carmen and I chose these songs because they reflect the heart of our relationship and our faith in
+                    Jesus. We hope you'll sing along with us!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        Vitou & Carmen · 27 June 2026 · Made with <i class="footer-heart">♥</i>
+    </footer>
+
+    <script>
+        // ── Scroll fade-in ──
+        (function () {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.08 });
+
+            document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        })();
+    </script>
+</body>
+
+</html>

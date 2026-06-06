@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,12 @@
     <meta name="theme-color" content="#7a2230">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header class="hero hero-photo">
         <div class="hero-copy">
@@ -37,9 +41,11 @@
             </div>
         </div>
     </header>
-    
+
     <nav class="top-nav">
         <a href="index.html" class="active"><i class="nav-icon">📋</i>Order of Service</a>
+        <a href="songs.html"><i class="nav-icon">🎵</i>Songs</a>
+        <a href="bible-readings.html"><i class="nav-icon">📖</i>Bible Readings</a>
         <a href="seating.html"><i class="nav-icon">🪑</i>Reception Seating</a>
         <a href="banquet-menu.html"><i class="nav-icon">🍽️</i>Banquet Menu</a>
     </nav>
@@ -56,17 +62,17 @@
                 <p>St George's Hurstville Anglican Church</p>
                 <p>Please arrive by 10:15 AM to be seated.</p>
             </div>
-            
+
             <div class="schedule-item">
                 <h3><span class="time-pill">11:30 AM</span> Family Photos</h3>
                 <p>Immediate family and friends will be asked to stay for photos at the church.</p>
             </div>
-            
+
             <div class="schedule-item">
                 <h3><span class="time-pill">12:00 PM</span> Intermission</h3>
                 <p>We invite you to rest, refresh, or explore Hurstville during the afternoon break.</p>
             </div>
-            
+
             <div class="schedule-item">
                 <h3><span class="time-pill">5:30 PM</span> The Banquet</h3>
                 <p>Taste of Shunde (Forest Road, Hurstville)</p>
@@ -100,7 +106,9 @@
                     <h3>St George's Hurstville Anglican Church</h3>
                     <p>Arrive by 10:15 AM so everyone can be seated before the ceremony begins.</p>
                     <ul class="info-list">
-                        <li>Map: <a href="https://www.google.com/maps/search/?api=1&query=St+George%27s+Hurstville+Anglican+Church" target="_blank" rel="noopener noreferrer">Open in Google Maps</a></li>
+                        <li>Map: <a
+                                href="https://www.google.com/maps/search/?api=1&query=St+George%27s+Hurstville+Anglican+Church"
+                                target="_blank" rel="noopener noreferrer">Open in Google Maps</a></li>
                         <li>Parking: Allow time to find street parking nearby and walk in calmly.</li>
                         <li>Best arrival window: 10:00 AM - 10:15 AM.</li>
                     </ul>
@@ -111,7 +119,9 @@
                     <h3>Taste of Shunde</h3>
                     <p>Forest Road, Hurstville. We'll gather here for the banquet at 5:30 PM.</p>
                     <ul class="info-list">
-                        <li>Map: <a href="https://www.google.com/maps/search/?api=1&query=Taste+of+Shunde+Forest+Road+Hurstville" target="_blank" rel="noopener noreferrer">Open in Google Maps</a></li>
+                        <li>Map: <a
+                                href="https://www.google.com/maps/search/?api=1&query=Taste+of+Shunde+Forest+Road+Hurstville"
+                                target="_blank" rel="noopener noreferrer">Open in Google Maps</a></li>
                         <li>Parking: Check for nearby street parking or public parking before the dinner rush.</li>
                         <li>Best arrival window: 5:15 PM - 5:30 PM.</li>
                     </ul>
@@ -127,11 +137,13 @@
 
             <div class="photo-grid">
                 <figure class="photo-card photo-card-large" onclick="openLightbox(this)">
-                    <img src="images/CarmenVitou39.JPG" alt="Vitou and Carmen walking hand in hand at sunset by the water">
+                    <img src="images/CarmenVitou39.JPG"
+                        alt="Vitou and Carmen walking hand in hand at sunset by the water">
                     <figcaption>Golden hour by the water.</figcaption>
                 </figure>
                 <figure class="photo-card" onclick="openLightbox(this)">
-                    <img src="images/CarmenVitou46.JPG" alt="Vitou and Carmen walking in front of the Sydney Harbour Bridge">
+                    <img src="images/CarmenVitou46.JPG"
+                        alt="Vitou and Carmen walking in front of the Sydney Harbour Bridge">
                     <figcaption>Walking together through the city.</figcaption>
                 </figure>
                 <figure class="photo-card" onclick="openLightbox(this)">
@@ -154,7 +166,7 @@
 
     <script>
         // ── Countdown Timer ──
-        (function() {
+        (function () {
             const weddingDate = new Date('2026-06-27T10:30:00+10:00').getTime();
             const daysEl = document.getElementById('cd-days');
             const hoursEl = document.getElementById('cd-hours');
@@ -185,7 +197,7 @@
         })();
 
         // ── Scroll fade-in (IntersectionObserver) ──
-        (function() {
+        (function () {
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -213,9 +225,10 @@
             document.body.style.overflow = '';
         }
 
-        document.addEventListener('keydown', function(e) {
+        document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape') closeLightbox();
         });
     </script>
 </body>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,12 @@
     <meta name="theme-color" content="#7a2230">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header class="hero hero-maroon">
         <p class="eyebrow">Banquet Menu</p>
@@ -20,6 +24,8 @@
 
     <nav class="top-nav">
         <a href="index.html"><i class="nav-icon">📋</i>Order of Service</a>
+        <a href="songs.html"><i class="nav-icon">🎵</i>Songs</a>
+        <a href="bible-readings.html"><i class="nav-icon">📖</i>Bible Readings</a>
         <a href="seating.html"><i class="nav-icon">🪑</i>Reception Seating</a>
         <a href="banquet-menu.html" class="active"><i class="nav-icon">🍽️</i>Banquet Menu</a>
     </nav>
@@ -31,7 +37,8 @@
             </div>
 
             <div class="menu-image-wrap">
-                <img src="images/Menu.png" alt="Banquet menu listing the dishes for the Taste of Shunde wedding banquet">
+                <img src="images/Menu.png"
+                    alt="Banquet menu listing the dishes for the Taste of Shunde wedding banquet">
             </div>
         </section>
     </main>
@@ -42,7 +49,7 @@
 
     <script>
         // ── Scroll fade-in ──
-        (function() {
+        (function () {
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -56,4 +63,5 @@
         })();
     </script>
 </body>
+
 </html>
