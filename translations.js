@@ -58,8 +58,8 @@ const translations = {
     "photo-group-11": { en: "St George's Hurstville Anglican", km: "សមាជិក St George's Hurstville Anglican" },
     "photo-group-12": { en: "Other Dear Friends", km: "មិត្តភក្តិជាទីស្រឡាញ់ដទៃទៀត" },
 
-    "event3-title": { en: "Intermission", km: "ពេលសម្រាក" },
-    "event3-desc": { en: "We invite you to rest, refresh, or explore Hurstville during the afternoon break.", km: "សូមអញ្ជើញសម្រាក ឬដើរកម្សាន្តនៅ Hurstville។" },
+    "event3-title": { en: "Light Refreshments", km: "អាហារសម្រន់" },
+    "event3-desc": { en: "We invite you to enjoy some light refreshments including Bánh mì and coffee by Kei Van", km: "យើងសូមអញ្ជើញអ្នករីករាយជាមួយអាហារសម្រន់ រួមមាននំប៉័ង (Bánh mì) និងកាហ្វេ ដោយ Kei Van" },
 
     "event4-title": { en: "The Banquet", km: "ពិធីជប់លៀង" },
     "event4-venue": { en: "Taste of Shunde (Forest Road, Hurstville)", km: "Taste of Shunde (Forest Road, Hurstville)" },
@@ -97,6 +97,15 @@ const translations = {
     "venue-reception-map": { en: "Open in Google Maps", km: "បើកក្នុង Google Maps" },
     "venue-reception-park": { en: "Parking: Check for nearby street parking or public parking before the dinner rush.", km: "ចំណត៖ ស្វែងរកកន្លែងចតមុនពេលល្ងាច។" },
     "venue-reception-time": { en: "Best arrival window: 5:15 PM - 5:30 PM.", km: "ពេលមកដល់ល្អបំផុត៖ ៥:១៥ - ៥:៣០ ល្ងាច។" },
+
+    // Wishing Well
+    "wishing-well-title": { en: "Wishing Well", km: "អំណោយចំណងដៃ" },
+    "wishing-well-desc": { en: "Your presence at our wedding is the greatest gift of all. However, if you wish to bless us with a gift, a contribution to our wishing well would be warmly appreciated.", km: "វត្តមានរបស់អ្នកគឺជាកាដូដ៏អស្ចារ្យបំផុតសម្រាប់យើង។ ប្រសិនបើអ្នកចង់ផ្តល់ចំណងដៃ យើងសូមទទួលដោយក្ដីរីករាយ។" },
+    "wishing-well-bank-title": { en: "Bank Transfer Details", km: "ព័ត៌មានគណនីធនាគារ" },
+    "wishing-well-bank-details": { 
+        en: "Name: Vitou & Carmen<br>BSB: [Your BSB]<br>Account: [Your Account Number]", 
+        km: "ឈ្មោះ: វិទូ និង ការមិន<br>BSB: [Your BSB]<br>លេខគណនី: [Your Account Number]" 
+    },
 
     // Photos
     "photos-title": { en: "Photo Highlights", km: "រូបថតពិសេស" },
