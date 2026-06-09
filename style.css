@@ -871,6 +871,24 @@ strong {
     color: var(--muted);
 }
 
+.reading-heading {
+    margin: 0 0 0.6rem;
+    font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.92rem;
+    font-style: italic;
+    color: var(--muted);
+}
+
+.reading-text sup {
+    font-size: 0.7em;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--brand);
+    margin-right: 0.08em;
+    vertical-align: super;
+    line-height: 0;
+}
+
 /* ─── Fade-in scroll animation ─── */
 
 .fade-in {
