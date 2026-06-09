@@ -54,6 +54,13 @@ const translations = {
     // Wedding Party
     "party-title": { en: "The Wedding Party", km: "ក្រុមអ្នករៀបចំពិធី" },
     "party-desc": { en: "The people helping us celebrate and keep the day running smoothly.", km: "អ្នកដែលជួយយើងក្នុងថ្ងៃពិសេសនេះ។" },
+    "party-family-bride": { en: "Family of the Bride", km: "គ្រួសារខាងកូនក្រមុំ" },
+    "party-family-groom": { en: "Family of the Groom", km: "គ្រួសារខាងកូនកំលោះ" },
+    "party-bridal": { en: "Bridal Party", km: "ក្រុមអ្នករៀបចំពិធី" },
+    "party-grandma": { en: "Grandma:", km: "លោកយាយ:" },
+    "party-father": { en: "Father:", km: "ឪពុក:" },
+    "party-mother": { en: "Mother:", km: "ម្ដាយ:" },
+    "party-brothers": { en: "Brothers:", km: "បងប្អូនប្រុស:" },
     "party-bridesmaids": { en: "Bridesmaids:", km: "នារីកិត្តិយស:" },
     "party-groomsmen": { en: "Groomsmen:", km: "បុរសកិត្តិយស:" },
     "party-officiant": { en: "Officiant:", km: "អ្នកប្រារព្ធពិធី:" },
@@ -122,6 +129,13 @@ const translations = {
     "reading3-label": { en: "Third Reading", km: "អត្ថបទទី ៣" },
     "reading-tba": { en: "To be announced", km: "នឹងប្រកាសនៅពេលក្រោយ" },
     "reading-placeholder": { en: "The scripture passage will be shared here closer to the wedding day.", km: "អត្ថបទព្រះគម្ពីរនឹងបង្ហាញនៅទីនេះនៅពេលជិតដល់ថ្ងៃមង្គលការ។" },
+
+    "reading1-title": { en: "Matthew 11:25-30 (NIV)", km: "ម៉ាថាយ ១១:២៥-៣០" },
+    "reading1-heading": { en: "The Father Revealed in the Son", km: "ព្រះបិតា និងព្រះបុត្រា" },
+    "reading1-text": { 
+        en: "<sup>25</sup>At that time Jesus said, \"I praise you, Father, Lord of heaven and earth, because you have hidden these things from the wise and learned, and revealed them to little children. <sup>26</sup>Yes, Father, for this is what you were pleased to do.<br><br><sup>27</sup>\"All things have been committed to me by my Father. No one knows the Son except the Father, and no one knows the Father except the Son and those whom the Son chooses to reveal him.<br><br><sup>28</sup>\"Come to me, all you who are weary and burdened, and I will give you rest. <sup>29</sup>Take my yoke upon you and learn from me, for I am gentle and humble in heart, and you will find rest for your souls. <sup>30</sup>For my yoke is easy and my burden is light.\"", 
+        km: "<sup>25</sup>នៅពេលនោះ ព្រះយេស៊ូមានព្រះបន្ទូលឡើងថា៖ «បពិត្រព្រះបិតាជាអម្ចាស់នៃស្ថានបរមសុខ* និងជាអម្ចាស់នៃផែនដី ទូលបង្គំសូមសរសើរតម្កើងព្រះអង្គ ព្រោះព្រះអង្គបានសម្តែងការទាំងនេះឲ្យមនុស្សតូចតាចយល់ តែព្រះអង្គបានលាក់មិនឲ្យអ្នកប្រាជ្ញ និងអ្នកចេះដឹងយល់ទេ។ <sup>26</sup>មែនហើយ! ព្រះអង្គសព្វព្រះហឫទ័យសម្រេចដូច្នេះ។<br><br><sup>27</sup>ព្រះបិតារបស់ខ្ញុំបានប្រគល់អ្វីៗទាំងអស់មកខ្ញុំ គ្មានអ្នកណាស្គាល់ព្រះបុត្រា ក្រៅពីព្រះបិតា ហើយក៏គ្មាននរណាស្គាល់ព្រះបិតាក្រៅពីព្រះបុត្រា និងអ្នកដែលព្រះបុត្រាសព្វព្រះហឫទ័យសម្តែងឲ្យស្គាល់នោះដែរ»។<br><br><strong>វិន័យរបស់ព្រះយេស៊ូ</strong><br><sup>28</sup>«អស់អ្នកដែលនឿយហត់ និងមានបន្ទុកធ្ងន់អើយ! ចូរមករកខ្ញុំ ខ្ញុំនឹងឲ្យអ្នករាល់គ្នាបានសម្រាក។ <sup>29</sup>ចូរយកនឹមរបស់ខ្ញុំដាក់លើអ្នករាល់គ្នា ហើយរៀនពីខ្ញុំទៅ អ្នករាល់គ្នាមុខជាបានស្ងប់ចិត្តមិនខាន ដ្បិតខ្ញុំស្លូត និងមានចិត្តសុភាព។ <sup>30</sup>នឹមរបស់ខ្ញុំស្រួល ហើយបន្ទុកដែលខ្ញុំដាក់លើអ្នករាល់គ្នាក៏ស្រាលដែរ»។" 
+    },
 
     "bible-why-title": { en: "Why These Passages", km: "ហេតុអ្វីបានជ្រើសរើសអត្ថបទទាំងនេះ" },
     "bible-why-desc": { en: "These readings were chosen because they speak to the promises we are making and the love that brought us together. We hope they encourage you as much as they encourage us.", km: "អត្ថបទទាំងនេះត្រូវបានជ្រើសរើសព្រោះវានិយាយពីសេចក្ដីសន្យា និងស្នេហាដែលផ្សារភ្ជាប់យើង។ សង្ឃឹមថាវានឹងលើកទឹកចិត្តអ្នកដូចដែលវាលើកទឹកចិត្តយើង។" },
