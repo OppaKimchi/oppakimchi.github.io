@@ -4,49 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Banquet Menu | Vitou & Carmen</title>
+    <title>Banquet Menu | Vitou &amp; Carmen</title>
     <meta name="theme-color" content="#7a2230">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Battambang:wght@400;700&family=Inter:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
     <header class="hero hero-maroon">
-        <p class="eyebrow">Banquet Menu</p>
-        <h1>Taste of Shunde</h1>
-        <p class="date">Wedding Banquet</p>
-        <p class="subtitle">A preview of the dishes we will be serving at the reception.</p>
+        <p class="eyebrow" data-i18n="menu-eyebrow">Banquet Menu</p>
+        <h1 data-i18n="menu-title">Taste of Shunde</h1>
+        <p class="date" data-i18n="menu-date">Wedding Banquet</p>
+        <p class="subtitle" data-i18n="menu-subtitle">A preview of the dishes we will be serving at the reception.</p>
     </header>
 
     <nav class="top-nav">
-        <a href="index.html"><i class="nav-icon">📋</i>Order of Service</a>
-        <a href="songs.html"><i class="nav-icon">🎵</i>Songs</a>
-        <a href="bible-readings.html"><i class="nav-icon">📖</i>Bible Readings</a>
-        <a href="seating.html"><i class="nav-icon">🪑</i>Reception Seating</a>
-        <a href="banquet-menu.html" class="active"><i class="nav-icon">🍽️</i>Banquet Menu</a>
+        <a href="../index.html" class="nav-back"><i class="nav-icon">←</i><span data-i18n="nav-back-ceremony">Ceremony</span></a>
+        <a href="index.html"><i class="nav-icon">🪑</i><span data-i18n="nav-seating">Reception Seating</span></a>
+        <a href="banquet-menu.html" class="active"><i class="nav-icon">🍽️</i><span data-i18n="nav-menu">Banquet Menu</span></a>
     </nav>
 
     <main class="container flow-layout">
         <section class="panel menu-panel fade-in" style="--delay: 0s">
             <div class="section-heading">
-                <h2>Banquet Menu</h2>
+                <h2 data-i18n="menu-section-title">Banquet Menu</h2>
             </div>
 
             <div class="menu-image-wrap">
-                <img src="images/Menu.png"
+                <img src="../images/Menu.png"
                     alt="Banquet menu listing the dishes for the Taste of Shunde wedding banquet">
             </div>
         </section>
     </main>
 
     <footer>
-        Vitou & Carmen · 27 June 2026 · Made with <i class="footer-heart">♥</i>
+        <span data-i18n="footer">Vitou &amp; Carmen · 27 June 2026 · Made with</span> <i class="footer-heart">♥</i>
     </footer>
 
+    <script src="../translations.js"></script>
     <script>
         // ── Scroll fade-in ──
         (function () {

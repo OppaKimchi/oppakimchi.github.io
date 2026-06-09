@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vitou & Carmen's Wedding</title>
+    <title>Vitou &amp; Carmen's Wedding</title>
     <meta name="theme-color" content="#7a2230">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Battambang:wght@400;700&family=Inter:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -17,138 +17,125 @@
 <body>
     <header class="hero hero-photo">
         <div class="hero-copy">
-            <p class="eyebrow">Wedding Day</p>
-            <h1>Vitou & Carmen</h1>
-            <p class="date">Saturday, 27 June 2026</p>
-            <p class="subtitle">A simple guide to the ceremony, the afternoon break, and the evening banquet.</p>
+            <p class="eyebrow" data-i18n="hero-eyebrow">Wedding Day</p>
+            <h1 data-i18n="hero-title">Vitou &amp; Carmen</h1>
+            <p class="date" data-i18n="hero-date">Saturday, 27 June 2026</p>
+            <p class="subtitle" data-i18n="hero-subtitle">A simple guide to the ceremony, the afternoon break, and the evening banquet.</p>
             <div class="countdown" id="countdown">
                 <div class="countdown-box">
                     <span class="countdown-num" id="cd-days">--</span>
-                    <span class="countdown-label">Days</span>
+                    <span class="countdown-label" data-i18n="cd-days">Days</span>
                 </div>
                 <div class="countdown-box">
                     <span class="countdown-num" id="cd-hours">--</span>
-                    <span class="countdown-label">Hours</span>
+                    <span class="countdown-label" data-i18n="cd-hours">Hours</span>
                 </div>
                 <div class="countdown-box">
                     <span class="countdown-num" id="cd-mins">--</span>
-                    <span class="countdown-label">Mins</span>
+                    <span class="countdown-label" data-i18n="cd-mins">Mins</span>
                 </div>
                 <div class="countdown-box">
                     <span class="countdown-num" id="cd-secs">--</span>
-                    <span class="countdown-label">Secs</span>
+                    <span class="countdown-label" data-i18n="cd-secs">Secs</span>
                 </div>
             </div>
         </div>
     </header>
 
     <nav class="top-nav">
-        <a href="index.html" class="active"><i class="nav-icon">📋</i>Order of Service</a>
-        <a href="songs.html"><i class="nav-icon">🎵</i>Songs</a>
-        <a href="bible-readings.html"><i class="nav-icon">📖</i>Bible Readings</a>
-        <a href="seating.html"><i class="nav-icon">🪑</i>Reception Seating</a>
-        <a href="banquet-menu.html"><i class="nav-icon">🍽️</i>Banquet Menu</a>
+        <a href="index.html" class="active"><i class="nav-icon">📋</i><span data-i18n="nav-order">Order of Service</span></a>
+        <a href="songs.html"><i class="nav-icon">🎵</i><span data-i18n="nav-songs">Songs</span></a>
+        <a href="bible-readings.html"><i class="nav-icon">📖</i><span data-i18n="nav-bible">Bible Readings</span></a>
     </nav>
 
     <main class="container flow-layout">
         <section class="panel fade-in" style="--delay: 0s">
             <div class="section-heading">
-                <h2>The Order of Events</h2>
-                <p>Everything you need for the day in one place.</p>
+                <h2 data-i18n="events-title">The Order of Events</h2>
+                <p data-i18n="events-desc">Everything you need for the day in one place.</p>
             </div>
 
             <div class="schedule-item">
-                <h3><span class="time-pill">10:30 AM</span> The I Do's</h3>
-                <p>St George's Hurstville Anglican Church</p>
-                <p>Please arrive by 10:15 AM to be seated.</p>
+                <h3><span class="time-pill">10:30 AM</span> <span data-i18n="event1-title">The I Do's</span></h3>
+                <p data-i18n="event1-venue">St George's Hurstville Anglican Church</p>
+                <p data-i18n="event1-note">Please arrive by 10:15 AM to be seated.</p>
             </div>
 
             <div class="schedule-item">
-                <h3><span class="time-pill">11:30 AM</span> Family Photos</h3>
-                <p>Immediate family and friends will be asked to stay for photos at the church.</p>
+                <h3><span class="time-pill">11:30 AM</span> <span data-i18n="event2-title">Family Photos</span></h3>
+                <p data-i18n="event2-desc">Immediate family and friends will be asked to stay for photos at the church.</p>
             </div>
 
             <div class="schedule-item">
-                <h3><span class="time-pill">12:00 PM</span> Intermission</h3>
-                <p>We invite you to rest, refresh, or explore Hurstville during the afternoon break.</p>
+                <h3><span class="time-pill">12:00 PM</span> <span data-i18n="event3-title">Intermission</span></h3>
+                <p data-i18n="event3-desc">We invite you to rest, refresh, or explore Hurstville during the afternoon break.</p>
             </div>
 
             <div class="schedule-item">
-                <h3><span class="time-pill">5:30 PM</span> The Banquet</h3>
-                <p>Taste of Shunde (Forest Road, Hurstville)</p>
-                <p>Join us for a feast to celebrate!</p>
+                <h3><span class="time-pill">5:30 PM</span> <span data-i18n="event4-title">The Banquet</span></h3>
+                <p data-i18n="event4-venue">Taste of Shunde (Forest Road, Hurstville)</p>
+                <p data-i18n="event4-note">Join us for a feast to celebrate!</p>
             </div>
         </section>
 
         <section class="panel soft-panel fade-in" style="--delay: 0.1s">
             <div class="section-heading">
-                <h2>The Wedding Party</h2>
-                <p>The people helping us celebrate and keep the day running smoothly.</p>
+                <h2 data-i18n="party-title">The Wedding Party</h2>
+                <p data-i18n="party-desc">The people helping us celebrate and keep the day running smoothly.</p>
             </div>
 
             <div class="party-grid">
-                <p><strong>Bridesmaids:</strong> Yameng Lai & Phoebe Tao</p>
-                <p><strong>Groomsmen:</strong> Alex Dam & Tenzin Shakya</p>
-                <p><strong>Officiant:</strong> Brian Tung</p>
-                <p><strong>Preacher:</strong> Ben Pantlin</p>
+                <p><strong data-i18n="party-bridesmaids">Bridesmaids:</strong> Yameng Lai &amp; Phoebe Tao</p>
+                <p><strong data-i18n="party-groomsmen">Groomsmen:</strong> Alex Dam &amp; Tenzin Shakya</p>
+                <p><strong data-i18n="party-officiant">Officiant:</strong> Brian Tung</p>
+                <p><strong data-i18n="party-preacher">Preacher:</strong> Ben Pantlin</p>
             </div>
         </section>
 
         <section class="panel venue-panel fade-in" style="--delay: 0.15s">
             <div class="section-heading">
-                <h2>Venues, Maps & Parking</h2>
-                <p>Tap a map link for directions, then plan a little extra time for parking and walking in.</p>
+                <h2 data-i18n="venues-title">Venues, Maps &amp; Parking</h2>
+                <p data-i18n="venues-desc">Tap a map link for directions, then plan a little extra time for parking and walking in.</p>
             </div>
 
             <div class="venue-grid">
                 <article class="venue-card">
-                    <p class="venue-label">Ceremony</p>
-                    <h3>St George's Hurstville Anglican Church</h3>
-                    <p>Arrive by 10:15 AM so everyone can be seated before the ceremony begins.</p>
+                    <p class="venue-label" data-i18n="venue-ceremony-label">Ceremony</p>
+                    <h3 data-i18n="venue-ceremony-name">St George's Hurstville Anglican Church</h3>
+                    <p data-i18n="venue-ceremony-desc">Arrive by 10:15 AM so everyone can be seated before the ceremony begins.</p>
                     <ul class="info-list">
-                        <li>Map: <a
+                        <li><span data-i18n="venue-ceremony-map-prefix">Map:</span> <a
                                 href="https://www.google.com/maps/search/?api=1&query=St+George%27s+Hurstville+Anglican+Church"
-                                target="_blank" rel="noopener noreferrer">Open in Google Maps</a></li>
-                        <li>Parking: Allow time to find street parking nearby and walk in calmly.</li>
-                        <li>Best arrival window: 10:00 AM - 10:15 AM.</li>
+                                target="_blank" rel="noopener noreferrer" data-i18n="venue-ceremony-map">Open in Google Maps</a></li>
+                        <li data-i18n="venue-ceremony-park">Parking: Allow time to find street parking nearby and walk in calmly.</li>
+                        <li data-i18n="venue-ceremony-time">Best arrival window: 10:00 AM - 10:15 AM.</li>
                     </ul>
                 </article>
 
-                <article class="venue-card">
-                    <p class="venue-label">Reception</p>
-                    <h3>Taste of Shunde</h3>
-                    <p>Forest Road, Hurstville. We'll gather here for the banquet at 5:30 PM.</p>
-                    <ul class="info-list">
-                        <li>Map: <a
-                                href="https://www.google.com/maps/search/?api=1&query=Taste+of+Shunde+Forest+Road+Hurstville"
-                                target="_blank" rel="noopener noreferrer">Open in Google Maps</a></li>
-                        <li>Parking: Check for nearby street parking or public parking before the dinner rush.</li>
-                        <li>Best arrival window: 5:15 PM - 5:30 PM.</li>
-                    </ul>
-                </article>
+
             </div>
         </section>
 
         <section class="panel gallery-panel fade-in" style="--delay: 0.2s">
             <div class="section-heading">
-                <h2>Photo Highlights</h2>
-                <p>Three moments from the day we wanted to share with everyone.</p>
+                <h2 data-i18n="photos-title">Photo Highlights</h2>
+                <p data-i18n="photos-desc">Three moments from the day we wanted to share with everyone.</p>
             </div>
 
             <div class="photo-grid">
                 <figure class="photo-card photo-card-large" onclick="openLightbox(this)">
                     <img src="images/CarmenVitou39.JPG"
                         alt="Vitou and Carmen walking hand in hand at sunset by the water">
-                    <figcaption>Golden hour by the water.</figcaption>
+                    <figcaption data-i18n="photo1-caption">Golden hour by the water.</figcaption>
                 </figure>
                 <figure class="photo-card" onclick="openLightbox(this)">
                     <img src="images/CarmenVitou46.JPG"
                         alt="Vitou and Carmen walking in front of the Sydney Harbour Bridge">
-                    <figcaption>Walking together through the city.</figcaption>
+                    <figcaption data-i18n="photo2-caption">Walking together through the city.</figcaption>
                 </figure>
                 <figure class="photo-card" onclick="openLightbox(this)">
                     <img src="images/CarmenVitou54.JPG" alt="Vitou and Carmen holding hands under a tree at sunset">
-                    <figcaption>A quiet moment in the park.</figcaption>
+                    <figcaption data-i18n="photo3-caption">A quiet moment in the park.</figcaption>
                 </figure>
             </div>
         </section>
@@ -161,9 +148,10 @@
     </div>
 
     <footer>
-        Vitou & Carmen · 27 June 2026 · Made with <i class="footer-heart">♥</i>
+        <span data-i18n="footer">Vitou &amp; Carmen · 27 June 2026 · Made with</span> <i class="footer-heart">♥</i>
     </footer>
 
+    <script src="translations.js"></script>
     <script>
         // ── Countdown Timer ──
         (function () {
