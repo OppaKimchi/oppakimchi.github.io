@@ -117,7 +117,7 @@ const translations = {
     "bible-section-title": { en: "Scripture Readings",       km: "អត្ថបទព្រះគម្ពីរ" },
     "bible-section-desc":  { en: "The passages that will be shared during the ceremony.", km: "អត្ថបទដែលនឹងអានក្នុងពិធី។" },
 
-    "reading1-label":   { en: "First Reading",               km: "អត្ថបទទី ១" },
+    "reading1-label":   { en: "Bible Reading",                km: "អត្ថបទព្រះគម្ពីរ" },
     "reading2-label":   { en: "Second Reading",              km: "អត្ថបទទី ២" },
     "reading3-label":   { en: "Third Reading",               km: "អត្ថបទទី ៣" },
     "reading-tba":      { en: "To be announced",             km: "នឹងប្រកាសនៅពេលក្រោយ" },
