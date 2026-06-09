@@ -102,9 +102,9 @@ const translations = {
     "wishing-well-title": { en: "Wishing Well", km: "អំណោយចំណងដៃ" },
     "wishing-well-desc": { en: "Your presence at our wedding is the greatest gift of all. However, if you wish to bless us with a gift, a contribution to our wishing well would be warmly appreciated.", km: "វត្តមានរបស់អ្នកគឺជាកាដូដ៏អស្ចារ្យបំផុតសម្រាប់យើង។ ប្រសិនបើអ្នកចង់ផ្តល់ចំណងដៃ យើងសូមទទួលដោយក្ដីរីករាយ។" },
     "wishing-well-bank-title": { en: "Bank Transfer Details", km: "ព័ត៌មានគណនីធនាគារ" },
-    "wishing-well-bank-details": { 
-        en: "Name: Vitou & Carmen<br>BSB: [Your BSB]<br>Account: [Your Account Number]", 
-        km: "ឈ្មោះ: វិទូ និង ការមិន<br>BSB: [Your BSB]<br>លេខគណនី: [Your Account Number]" 
+    "wishing-well-bank-details": {
+        en: "Name: Vitou & Carmen<br>BSB: [Your BSB]<br>Account: [Your Account Number]",
+        km: "ឈ្មោះ: វិទូ និង ការមិន<br>BSB: [Your BSB]<br>លេខគណនី: [Your Account Number]"
     },
 
     // Photos
@@ -128,7 +128,7 @@ const translations = {
 
     "song1-title": { en: "Processional Song", km: "បទចម្រៀងចូលពិធី" },
     "song1-name": { en: "Amazing Grace", km: "ព្រះគុណអស្ចារ្យ" },
-    "song1-lyrics": { 
+    "song1-lyrics": {
         en: "Amazing grace (how sweet the sound)\nthat saved a wretch like me!\nI once was lost, but now am found,\nwas blind, but now I see.\n\n 'Twas grace that taught my heart to fear,\nand grace my fears relieved;\nhow precious did that grace appear\nthe hour I first believed!\n\nThrough many dangers, toils and snares\nI have already come:\n'tis grace has brought me safe thus far,\nand grace will lead me home.\n\nWhen we’ve been there ten thousand years,\nBright shining as the sun,\nWe’ve no less days to sing God’s praise\nThan when we first begun,\nThan when we first begun.",
         km: "<i>Verses 1-3 align with the traditional Khmer Hymnal 97. Verse 4 is a direct translation of the appended \"ten thousand years\" verse, which is not traditionally part of the standard Khmer hymnal text.</i>\n\nVerse 1\nព្រះគុណអស្ចារ្យជាសព្ទពីរោះ\nដែលប្រោសមនុស្សយ៉ាងដូចខ្ញុំ\nពីដើមបាត់បង់តែទ្រង់សង្គ្រោះ\nក៏ខ្វាក់តែទ្រង់អប់រំ។\n\nVerse 2\nព្រះគុណបង្រៀនឱ្យកោតខ្លាចព្រះ\nក៏បានកម្ចាត់ភ័យទៅ\nព្រះគុណដែលទ្រង់ផ្តល់មកបានឈ្នះ\nឱ្យចិត្តខ្ញុំចូលស៊ប់នៅ។\n\nVerse 3\nព្រះគុណនាំខ្ញុំឱ្យរួចអន្ទាក់\nនិងការល្បួងលួងជាច្រើន\nមានតែព្រះគុណដែលនាំនោះជាក់\nខាងមុខនឹងប្រោសតន្ថើន។\n\nVerse 4\nនៅពេលយើងនៅទីនោះមួយម៉ឺនឆ្នាំ\nភ្លឺចែងចាំងដូចព្រះអាទិត្យ\nយើងមានថ្ងៃច្រៀងសរសើរព្រះអង្គ\nមិនតិចជាងពេលផ្ដើមពិត។"
     },
