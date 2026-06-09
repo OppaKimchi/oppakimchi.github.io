@@ -827,6 +827,19 @@ strong {
     font-style: italic;
 }
 
+.song-lyrics {
+    margin: 0.8rem 0 0;
+    padding: 0.8rem 1rem;
+    border-left: 3px solid var(--brand);
+    background: rgba(122, 34, 48, 0.02);
+    border-radius: 0 12px 12px 0;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--muted);
+    white-space: pre-wrap;
+}
+
 /* ─── Bible Reading Cards ─── */
 
 .reading-list {
