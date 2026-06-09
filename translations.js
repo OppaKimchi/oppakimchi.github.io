@@ -12,6 +12,7 @@ const translations = {
     "nav-seating":      { en: "Reception Seating",  km: "កន្លែងអង្គុយ" },
     "nav-menu":         { en: "Banquet Menu",       km: "មុខម្ហូប" },
     "nav-back-ceremony":{ en: "Ceremony",           km: "ពិធីមង្គលការ" },
+    "nav-venue":        { en: "Venue & Parking",    km: "ទីកន្លែង និងចំណត" },
 
     // ── Shared: Footer ──
     "footer":           { en: "Vitou & Carmen · 27 June 2026 · Made with", km: "វិទូ និង ការមិន · ២៧ មិថុនា ២០២៦ · ធ្វើដោយ" },
@@ -152,6 +153,16 @@ const translations = {
     "menu-date":        { en: "Wedding Banquet",             km: "ពិធីជប់លៀងមង្គលការ" },
     "menu-subtitle":    { en: "A preview of the dishes we will be serving at the reception.", km: "មុខម្ហូបដែលនឹងបម្រើក្នុងពិធីជប់លៀង។" },
     "menu-section-title": { en: "Banquet Menu",              km: "មុខម្ហូប" },
+
+    // ══════════════════════════════════════════
+    // ── reception/index.html (landing) ──
+    // ══════════════════════════════════════════
+
+    "reception-eyebrow":  { en: "Evening Reception",           km: "ពិធីជប់លៀងពេលល្ងាច" },
+    "reception-title":    { en: "The Banquet",                 km: "ពិធីជប់លៀង" },
+    "reception-date":     { en: "Saturday, 27 June 2026 · 5:30 PM", km: "ថ្ងៃសៅរ៍ ២៧ មិថុនា ២០២៦ · ៥:៣០ ល្ងាច" },
+    "reception-subtitle": { en: "Everything you need for the evening celebration — venue details, seating, and menu.", km: "ព័ត៌មានទាំងអស់សម្រាប់ពិធីជប់លៀងពេលល្ងាច — ទីកន្លែង កន្លែងអង្គុយ និងមុខម្ហូប។" },
+    "venue-reception-intro": { en: "Plan your journey to the banquet venue and arrive stress-free.", km: "រៀបចំដំណើរទៅទីកន្លែងជប់លៀង។" },
 };
 
 

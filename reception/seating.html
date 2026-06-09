@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reception Seating | Vitou &amp; Carmen</title>
+    <meta name="theme-color" content="#7a2230">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Battambang:wght@400;700&family=Inter:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header class="hero hero-maroon">
+        <p class="eyebrow" data-i18n="seating-eyebrow">Reception Seating</p>
+        <h1 data-i18n="seating-title">Taste of Shunde Banquet</h1>
+        <p class="date" data-i18n="seating-date">Find Your Seat</p>
+        <p class="subtitle" data-i18n="seating-subtitle">Search by first or last name to see your table.</p>
+    </header>
+
+    <nav class="top-nav">
+        <a href="../index.html" class="nav-back"><i class="nav-icon">←</i><span data-i18n="nav-back-ceremony">Ceremony</span></a>
+        <a href="index.html"><i class="nav-icon">📍</i><span data-i18n="nav-venue">Venue &amp; Parking</span></a>
+        <a href="seating.html" class="active"><i class="nav-icon">🪑</i><span data-i18n="nav-seating">Reception Seating</span></a>
+        <a href="banquet-menu.html"><i class="nav-icon">🍽️</i><span data-i18n="nav-menu">Banquet Menu</span></a>
+    </nav>
+
+    <main class="container flow-layout">
+        <section class="panel guest-search-panel fade-in" style="--delay: 0s">
+            <div class="section-heading">
+                <h2 data-i18n="seating-section-title">Guest Search</h2>
+                <p data-i18n="seating-section-desc">Type your first or last name below to find your table.</p>
+            </div>
+
+            <label class="search-label" for="searchInput" data-i18n="seating-search-label">Search guest name</label>
+            <input type="text" id="searchInput" placeholder="Enter your name..." data-i18n-placeholder="seating-search-placeholder">
+            <p class="search-hint" data-i18n="seating-search-hint">Use at least two letters for the best result.</p>
+
+            <div id="results" class="results-shell"></div>
+        </section>
+    </main>
+
+    <footer>
+        <span data-i18n="footer">Vitou &amp; Carmen · 27 June 2026 · Made with</span> <i class="footer-heart">♥</i>
+    </footer>
+
+    <script src="../translations.js"></script>
+    <script>
+        const seatingData = [
+            { table: "Table 1", guests: ["Carol Chiu", "Jaffe Chiu", "Melody Robertson", "Edward Robertson", "Ian Robertson", "James Zhang", "Angie Zhang", "Ian Wu", "Winnie Wu", "Howard Law"] },
+            { table: "Table 2", guests: ["Victor Lai", "Fiona Lam", "Vincent Chen", "Lina Chen", "Stephanie Wu", "Lily Xiao", "Marcus Li", "Sarah Chen", "Tom Pirie", "Naomi Huang"] },
+            { table: "Table 3", guests: ["Vickie Su", "Wilson Leung", "Carl Tong", "Celeste Leong", "Tracy Li", "Nancy Li", "Glorya Lam", "Alan Lam", "Kenny Zhou"] },
+            { table: "Table 4", guests: ["Chau Au", "Antanitta Rajah", "Nicholas Lee", "Keanu Tsang", "Wilbur Tsang", "Andrea Su", "Terence Li", "Andy Hardy", "Madeline Tjahjadi", "Kevin Lee"] },
+            { table: "Table 5", guests: ["Sophia Aspera", "Isaac Lau", "Tracey Nguyen", "James Wealth", "Kate Aizparu", "Hayley Espanol", "Trent Bell", "Sameen Khan", "Michael O'Reilly", "Kathleem Dumlao"] },
+            { table: "Table 6", guests: ["Alice Chau", "Grandma", "Anson Nguyen", "Calista Chiu", "Aaron Nguyen", "Kenneth Fung", "Chor Ling Ho", "Kan Kee Fung", "Jenny Voller", "Geoff Voller"] },
+            { table: "Table 7", guests: ["Vichet Seng", "Malen Eang", "Oscar Chet", "Veronika Chet", "Angelina Chet", "Botum Bun", "Erick Seng", "Pholy Chin", "Thidapith Tith", "Jim McDonald", "Sofie McDonald"] },
+            { table: "Table 8", guests: ["Vouch Ngim Srun", "Neang Seng", "Savorn In", "Vouchluy Srun", "Carmen Nguyen", "Vitou Seng", "Yameng Lai", "Phoebe Tao", "Alex Dam", "Linh Dam", "Tenzin Shakya"] },
+            { table: "Table 9", guests: ["Peter Chen", "Thomas Chin", "Carol Chin", "Estella Green", "Grace Chen", "Ben Pantlin", "Cate Hong", "Jason He", "Kinzey Rahardja", "Stella Li", "Ali Fardos"] }
+        ];
+
+        // Helper to get translated string for dynamic content
+        function t(key) {
+            const lang = getLanguage();
+            const entry = translations[key];
+            if (!entry) return key;
+            return entry[lang] || entry['en'];
+        }
+
+        function highlightMatch(name, query) {
+            const idx = name.toLowerCase().indexOf(query);
+            if (idx === -1) return name;
+            const before = name.slice(0, idx);
+            const match = name.slice(idx, idx + query.length);
+            const after = name.slice(idx + query.length);
+            return `${before}<mark>${match}</mark>${after}`;
+        }
+
+        function searchGuest() {
+            const input = document.getElementById('searchInput').value.toLowerCase().trim();
+            const resultsDiv = document.getElementById('results');
+
+            if (input.length < 2) {
+                resultsDiv.innerHTML = `<p class="empty-state">${t('seating-empty')}</p>`;
+                return;
+            }
+
+            let htmlString = '';
+
+            seatingData.forEach(tableGroup => {
+                const matchedGuests = tableGroup.guests.filter(guest => guest.toLowerCase().includes(input));
+
+                if (matchedGuests.length > 0) {
+                    const highlightedList = tableGroup.guests.map(guest => {
+                        if (guest.toLowerCase().includes(input)) {
+                            return highlightMatch(guest, input);
+                        }
+                        return guest;
+                    }).join(', ');
+
+                    htmlString += `
+                        <div class="table-result">
+                            <h3>${tableGroup.table}</h3>
+                            <p><strong>${t('seating-guests-label')}</strong> ${highlightedList}</p>
+                        </div>
+                    `;
+                }
+            });
+
+            if (htmlString === '') {
+                resultsDiv.innerHTML = `<p class="empty-state">${t('seating-no-result')}</p>`;
+            } else {
+                resultsDiv.innerHTML = htmlString;
+            }
+        }
+
+        const searchInput = document.getElementById('searchInput');
+        const resultsDiv = document.getElementById('results');
+
+        // Initial empty state will be set after translations load
+        document.addEventListener('DOMContentLoaded', () => {
+            resultsDiv.innerHTML = `<p class="empty-state">${t('seating-empty')}</p>`;
+        });
+
+        searchInput.addEventListener('input', searchGuest);
+        searchInput.addEventListener('focus', () => {
+            if (!resultsDiv.innerHTML) {
+                resultsDiv.innerHTML = `<p class="empty-state">${t('seating-empty')}</p>`;
+            }
+        });
+
+        // ── Scroll fade-in ──
+        (function () {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.08 });
+
+            document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        })();
+    </script>
+</body>
+
+</html>
