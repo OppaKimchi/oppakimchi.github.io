@@ -44,6 +44,19 @@ const translations = {
 
     "event2-title": { en: "Family Photos", km: "រូបថតគ្រួសារ" },
     "event2-desc": { en: "Immediate family and friends will be asked to stay for photos at the church.", km: "គ្រួសារ និងមិត្តភក្តិជិតស្និទ្ធ សូមនៅថតរូបនៅវិហារ។" },
+    "photo-coordinators": { en: "Coordinators:", km: "អ្នកសម្របសម្រួល:" },
+    "photo-group-1": { en: "Everyone", km: "ទាំងអស់គ្នា" },
+    "photo-group-2": { en: "Vitou's Immediate Family", km: "គ្រួសារខាងវិទូ" },
+    "photo-group-3": { en: "Vitou and Carmen's Immediate Family", km: "គ្រួសារខាងវិទូ និងការមិន" },
+    "photo-group-4": { en: "Carmen's Immediate Family", km: "គ្រួសារខាងការមិន" },
+    "photo-group-5": { en: "Vitou's Extended Family", km: "សាច់ញាតិខាងវិទូ" },
+    "photo-group-6": { en: "Carmen's Extended Family", km: "សាច់ញាតិខាងការមិន" },
+    "photo-group-7": { en: "Carmen's Family Friends + Family", km: "មិត្តភក្តិគ្រួសារខាងការមិន" },
+    "photo-group-8": { en: "Carmen's Badminton Friends", km: "មិត្តភក្តិវាយសីខាងការមិន" },
+    "photo-group-9": { en: "Vitou's Uni Friends", km: "មិត្តភក្តិសាកលវិទ្យាល័យខាងវិទូ" },
+    "photo-group-10": { en: "Carmen's Uni Friends", km: "មិត្តភក្តិសាកលវិទ្យាល័យខាងការមិន" },
+    "photo-group-11": { en: "St George's Hurstville Anglican", km: "សមាជិក St George's Hurstville Anglican" },
+    "photo-group-12": { en: "Other Dear Friends", km: "មិត្តភក្តិជាទីស្រឡាញ់ដទៃទៀត" },
 
     "event3-title": { en: "Intermission", km: "ពេលសម្រាក" },
     "event3-desc": { en: "We invite you to rest, refresh, or explore Hurstville during the afternoon break.", km: "សូមអញ្ជើញសម្រាក ឬដើរកម្សាន្តនៅ Hurstville។" },
@@ -122,8 +135,12 @@ const translations = {
         en: "What gift of grace is Jesus my redeemer\nThere is no more for heaven now to give\nHe is my joy, my righteousness, and freedom\nMy steadfast love, my deep and boundless peace\n\nTo this I hold, my hope is only Jesus\nFor my life is wholly bound to his\nOh how strange and divine, I can sing: all is mine!\nYet not I, but through Christ in me\n\nThe night is dark but I am not forsaken\nFor by my side, the Saviour He will stay\nI labour on in weakness and rejoicing\nFor in my need, His power is displayed\n\nTo this I hold, my Shepherd will defend me\nThrough the deepest valley He will lead\nOh the night has been won, and I shall overcome!\nYet not I, but through Christ in me\n\nNo fate I dread, I know I am forgiven\nThe future sure, the price it has been paid\nFor Jesus bled and suffered for my pardon\nAnd He was raised to overthrow the grave\n\nTo this I hold, my sin has been defeated\nJesus now and ever is my plea\nOh the chains are released, I can sing: I am free!\nYet not I, but through Christ in me\n\nWith every breath I long to follow Jesus\nFor He has said that He will bring me home\nAnd day by day I know He will renew me\nUntil I stand with joy before the throne\n\nTo this I hold, my hope is only Jesus\nAll the glory evermore to Him\nWhen the race is complete, still my lips shall repeat:\nYet not I, but through Christ in me!\n\nTo this I hold, my hope is only Jesus\nAll the glory evermore to Him\nWhen the race is complete, still my lips shall repeat:\nYet not I, but through Christ in me!\n\nYet not I, but through Christ in me!\nYet not I, but through Christ in me!\n\n\n© 2018 CityAlight Music CCLI #7121852",
         km: "Verse 1\nតើព្រះយេស៊ូវជាព្រះប្រោសលោះមានព្រះគុណអ្វីខ្លះ\nស្ថានសួគ៌គ្មានអ្វីត្រូវប្រទានទៀតទេឥឡូវនេះ\nទ្រង់ជាអំណរ សេចក្ដីសុចរិត និងសេរីភាពខ្ញុំ\nជាក្ដីស្រឡាញ់ខ្ជាប់ខ្ជួន សន្តិភាពជ្រាលជ្រៅគ្មានព្រំដែន។\n\nចំពោះសេចក្ដីនេះខ្ញុំប្រកាន់ខ្ជាប់ ក្ដីសង្ឃឹមខ្ញុំគឺព្រះយេស៊ូវ\nដ្បិតជីវិតខ្ញុំជាប់ចំណងទាំងស្រុងនឹងទ្រង់\nអូ ចម្លែកនិងអស្ចារ្យណាស់ ខ្ញុំអាចច្រៀងថា៖ គ្រប់យ៉ាងជារបស់ខ្ញុំ!\nតែមិនមែនខ្ញុំទេ គឺព្រះគ្រីស្ទដែលគង់ក្នុងខ្ញុំ។\n\nVerse 2\nយប់ងងឹត តែខ្ញុំមិនត្រូវគេបោះបង់ឡើយ\nដ្បិតព្រះអង្គសង្គ្រោះ ទ្រង់គង់នៅក្បែរខ្ញុំ\nខ្ញុំបន្តធ្វើការក្នុងភាពខ្សោយ និងអំណរ\nព្រោះក្នុងគ្រាខ្វះខាត ឫទ្ធានុភាពទ្រង់បានសម្ដែង។\n\nចំពោះសេចក្ដីនេះខ្ញុំប្រកាន់ខ្ជាប់ អ្នកគង្វាលខ្ញុំនឹងការពារ\nទោះកាត់ជ្រលងភ្នំជ្រៅ ទ្រង់នឹងដឹកនាំ\nអូ យប់ត្រូវបានផ្ចាញ់ ហើយខ្ញុំនឹងឈ្នះ!\nតែមិនមែនខ្ញុំទេ គឺព្រះគ្រីស្ទដែលគង់ក្នុងខ្ញុំ។\n\nVerse 3\nខ្ញុំមិនខ្លាចវាសនា ខ្ញុំដឹងថាខ្ញុំត្រូវបានអត់ទោស\nអនាគតពិតប្រាកដ តម្លៃត្រូវបានបង់រួចហើយ\nដ្បិតព្រះយេស៊ូវបង្ហូរឈាម និងរងទុក្ខដើម្បីផ្ដល់ការលើកលែង\nហើយទ្រង់រស់ឡើងវិញ ដើម្បីផ្ដួលរំលំផ្នូរ។\n\nចំពោះសេចក្ដីនេះខ្ញុំប្រកាន់ខ្ជាប់ បាបខ្ញុំត្រូវបានបំផ្លាញ\nព្រះយេស៊ូវជាទីពឹងរបស់ខ្ញុំ ឥឡូវនិងរហូតតទៅ\nអូ ច្រវាក់ត្រូវបានស្រាយ ខ្ញុំអាចច្រៀងថា៖ ខ្ញុំមានសេរីភាព!\nតែមិនមែនខ្ញុំទេ គឺព្រះគ្រីស្ទដែលគង់ក្នុងខ្ញុំ។\n\nVerse 4\nរាល់ដង្ហើម ខ្ញុំប្រាថ្នាតាមព្រះយេស៊ូវ\nព្រោះទ្រង់មានបន្ទូលថា ទ្រង់នឹងនាំខ្ញុំទៅផ្ទះ\nហើយពីមួយថ្ងៃទៅមួយថ្ងៃ ខ្ញុំដឹងថាទ្រង់នឹងកែប្រែខ្ញុំថ្មី\nរហូតដល់ខ្ញុំឈរដោយអំណរនៅចំពោះបល្ល័ង្ក។\n\nចំពោះសេចក្ដីនេះខ្ញុំប្រកាន់ខ្ជាប់ ក្ដីសង្ឃឹមខ្ញុំគឺព្រះយេស៊ូវ\nសិរីល្អទាំងអស់ជារបស់ទ្រង់ជារៀងរហូត\nពេលការប្រណាំងចប់ បបូរមាត់ខ្ញុំនៅតែពោលថា៖\nតែមិនមែនខ្ញុំទេ គឺព្រះគ្រីស្ទដែលគង់ក្នុងខ្ញុំ!\n\nចំពោះសេចក្ដីនេះខ្ញុំប្រកាន់ខ្ជាប់ ក្ដីសង្ឃឹមខ្ញុំគឺព្រះយេស៊ូវ\nសិរីល្អទាំងអស់ជារបស់ទ្រង់ជារៀងរហូត\nពេលការប្រណាំងចប់ បបូរមាត់ខ្ញុំនៅតែពោលថា៖\nតែមិនមែនខ្ញុំទេ គឺព្រះគ្រីស្ទដែលគង់ក្នុងខ្ញុំ!\n\nតែមិនមែនខ្ញុំទេ គឺព្រះគ្រីស្ទដែលគង់ក្នុងខ្ញុំ!\nតែមិនមែនខ្ញុំទេ គឺព្រះគ្រីស្ទដែលគង់ក្នុងខ្ញុំ!"
     },
-    "song3-title": { en: "Worship Song", km: "បទថ្វាយបង្គំ" },
     "song4-title": { en: "Recessional Song", km: "បទចម្រៀងចេញពិធី" },
+    "song4-name": { en: "Amazing Grace (My Chains Are Gone)", km: "Amazing Grace (My Chains Are Gone)" },
+    "song4-lyrics": {
+        en: "Amazing grace, how sweet the sound\nThat saved a wretch like me\nI once was lost, but now I'm found\nWas blind, but now I see\n\n'Twas grace that taught my heart to fear\nAnd grace my fears relieved\nHow precious did that grace appear\nThe hour I first believed\n\nMy chains are gone, I've been set free\nMy God, my Savior has ransomed me\nAnd like a flood, His mercy reigns\nUnending love, amazing grace\n\nThe Lord has promised good to me\nHis word my hope secures\nHe will my shield and portion be\nAs long as life endures\n\nMy chains are gone, I've been set free\nMy God, my Savior has ransomed me\nAnd like a flood, His mercy reigns\nUnending love, amazing grace\n\nThe earth shall soon dissolve like snow\nThe sun forbear to shine\nBut God, Who called me here below\nWill be forever mine\nWill be forever mine\nYou are forever mine",
+        km: "<i>[Khmer lyrics to be added]</i>"
+    },
     "song-tba": { en: "To be announced", km: "នឹងប្រកាសនៅពេលក្រោយ" },
 
     "songs-note-title": { en: "A Note on the Music", km: "ចំណាំអំពីតន្ត្រី" },
