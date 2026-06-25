@@ -23,9 +23,11 @@
     </header>
 
     <nav class="top-nav">
-        <a href="../index.html" class="nav-back"><i class="nav-icon">←</i><span data-i18n="nav-back-ceremony">Ceremony</span></a>
+        <a href="../index.html" class="nav-back"><i class="nav-icon">←</i><span
+                data-i18n="nav-back-ceremony">Ceremony</span></a>
         <a href="index.html"><i class="nav-icon">📍</i><span data-i18n="nav-venue">Venue &amp; Parking</span></a>
-        <a href="seating.html" class="active"><i class="nav-icon">🪑</i><span data-i18n="nav-seating">Reception Seating</span></a>
+        <a href="seating.html" class="active"><i class="nav-icon">🪑</i><span data-i18n="nav-seating">Reception
+                Seating</span></a>
         <a href="banquet-menu.html"><i class="nav-icon">🍽️</i><span data-i18n="nav-menu">Banquet Menu</span></a>
     </nav>
 
@@ -37,7 +39,8 @@
             </div>
 
             <label class="search-label" for="searchInput" data-i18n="seating-search-label">Search guest name</label>
-            <input type="text" id="searchInput" placeholder="Enter your name..." data-i18n-placeholder="seating-search-placeholder">
+            <input type="text" id="searchInput" placeholder="Enter your name..."
+                data-i18n-placeholder="seating-search-placeholder">
             <p class="search-hint" data-i18n="seating-search-hint">Use at least two letters for the best result.</p>
 
             <div id="results" class="results-shell"></div>
@@ -52,14 +55,14 @@
     <script>
         const seatingData = [
             { table: "Table 1", guests: ["Carol Chiu", "Jaffe Chiu", "Melody Robertson", "Edward Robertson", "Ian Robertson", "James Zhang", "Angie Zhang", "Ian Wu", "Winnie Wu", "Howard Law"] },
-            { table: "Table 2", guests: ["Victor Lai", "Fiona Lam", "Vincent Chen", "Lina Chen", "Stephanie Wu", "Lily Xiao", "Marcus Li", "Sarah Chen", "Tom Pirie", "Naomi Huang"] },
-            { table: "Table 3", guests: ["Vickie Su", "Wilson Leung", "Carl Tong", "Celeste Leong", "Tracy Li", "Nancy Li", "Glorya Lam", "Alan Lam", "Kenny Zhou"] },
-            { table: "Table 4", guests: ["Chau Au", "Antanitta Rajah", "Nicholas Lee", "Keanu Tsang", "Wilbur Tsang", "Andrea Su", "Terence Li", "Andy Hardy", "Madeline Tjahjadi", "Kevin Lee"] },
+            { table: "Table 2", guests: ["Kinzey Rahardja", "Stella Li", "Fiona Lam", "Vincent Chen", "Lina Chen", "Lily Xiao", "Marcus Li", "Sarah Chen", "Tom Pirie", "Naomi Huang"] },
+            { table: "Table 3", guests: ["Vickie Su", "Wilson Leung", "Carl Tong", "Celeste Leong", "Grace Chen", "Tracy Li", "Nancy Li", "Glorya Lam", "Alan Lam", "Kenny Zhou"] },
+            { table: "Table 4", guests: ["Chau Au", "Antanitta Rajah", "Nicholas Lee", "Keanu Tsang", "Wilbur Tsang", "Andrea Su", "Terence Li", "Andy Hardy", "Madeline Tjahjadi", "Ali Fardos"] },
             { table: "Table 5", guests: ["Sophia Aspera", "Isaac Lau", "Tracey Nguyen", "James Wealth", "Kate Aizparu", "Hayley Espanol", "Trent Bell", "Sameen Khan", "Michael O'Reilly", "Kathleem Dumlao"] },
-            { table: "Table 6", guests: ["Alice Chau", "Grandma", "Anson Nguyen", "Calista Chiu", "Aaron Nguyen", "Kenneth Fung", "Chor Ling Ho", "Kan Kee Fung", "Jenny Voller", "Geoff Voller"] },
+            { table: "Table 6", guests: ["Peter Chen", "Thomas Chin", "Carol Chin", "Ben Pantlin", "Cate Hong", "Jason He", "Stephanie Wu", "Victor Lai", "Kevin Lee", "Kathy Keever"] },
             { table: "Table 7", guests: ["Vichet Seng", "Malen Eang", "Oscar Chet", "Veronika Chet", "Angelina Chet", "Botum Bun", "Erick Seng", "Pholy Chin", "Thidapith Tith", "Jim McDonald", "Sofie McDonald"] },
-            { table: "Table 8", guests: ["Vouch Ngim Srun", "Neang Seng", "Savorn In", "Vouchluy Srun", "Carmen Nguyen", "Vitou Seng", "Yameng Lai", "Phoebe Tao", "Alex Dam", "Linh Dam", "Tenzin Shakya"] },
-            { table: "Table 9", guests: ["Peter Chen", "Thomas Chin", "Carol Chin", "Estella Green", "Grace Chen", "Ben Pantlin", "Cate Hong", "Jason He", "Kinzey Rahardja", "Stella Li", "Ali Fardos"] }
+            { table: "Table 8", guests: ["Vouch Ngim Srun", "Neang Seng", "Yameng Lai", "Phoebe Tao", "Carmen Nguyen", "Vitou Seng", "Tenzin Shakya", "Alex Dam", "Linh Dam", "Savorn In", "Vouchluy Srun"] },
+            { table: "Table 9", guests: ["Alice Chau", "Grandma", "Anson Nguyen", "Calista Chiu", "Aaron Nguyen", "Kenneth Fung", "Chor Ling Ho", "Kan Kee Fung", "Jenny Voller", "Geoff Voller"] }
         ];
 
         // Helper to get translated string for dynamic content
